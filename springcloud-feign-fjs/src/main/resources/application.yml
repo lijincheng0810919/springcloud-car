@@ -1,0 +1,16 @@
+server:
+  port: 8905
+
+spring:
+  application:
+    name: client-feign-fjs
+
+eureka:
+  client:
+    #eureka服务地址
+    service-url:
+      defaultZone: http://localhost:8848/eureka
+feign:
+  hystrix:
+    #开启断路器
+    enabled: true

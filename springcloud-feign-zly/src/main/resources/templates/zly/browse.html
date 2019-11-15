@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- jquery -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../js/bootstrap/css/bootstrap.css">
+    <!-- 表格 -->
+    <script src="../js/bootstrap-table/bootstrap-table.js"></script>
+    <!-- 表格中文 -->
+    <script src="../js/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+    <link rel="stylesheet" href="../js/bootstrap-table/bootstrap-table.css">
+    <!-- 时间 -->
+    <script src="../js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <!-- 时间中文 -->
+    <script src="../js/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <link rel="stylesheet" href="../js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+    <!-- 引入弹框的js -->
+    <script src="../js/bootstrap-bootbox/bootbox.js"></script>
+</head>
+<!--浏览记录页面-->
+<body>
+<div class="table" id="carTable"></div>
+</body>
+
+<script type="text/javascript">
+    $(function(){
+        initCarTable();
+    })
+
+   /* function delCarAll(){
+        var ids="";
+        var chkid=$("#carTable").bootstrapTable("getSelections");
+        for (var i = 0; i < chkid.length; i++) {
+            ids+=ids==""?ids+chkid[i].id:","+chkid[i].id;
+        }
+        if(ids==""){
+            bootbox.alert("请选择");
+            return;
+        }
+
+        bootbox.confirm({
+            message: "你确认删除编号为"+ids+"的数据",
+            buttons: {
+                confirm: {
+                    label: '确定',
+                    className: 'btn-success'
+                },
+                cancel: {
+                    label: '取消',
+                    className: 'btn-danger'
+                }
+            },
+            callback: function (result) {
+                if(result){
+                    $.post('../user/deleteBook.do',{ids:ids},function(data){
+                        if (data) {
+                            sousuo();
+                        }else{
+                            bootbox.alert("删除失败");;
+                        }
+                    })
+                }
+            }
+        });
+    }
+*/
+    function sousuo(){
+
+        $("#bookTable").bootstrapTable("refresh",{
+            query:{
+                'page':1,
+
+            }
+        })
+    }
+
+    function initCarTable(){
+        $("#carTable").bootstrapTable({
+            toolbar:'#toolbar',
+            url:"../zly/queryCarBrowse",
+            method:"post",
+            contentType:'application/x-www-form-urlencoded',//post请求按照表单方式
+            pagination:true,
+            pageList:[2,4,6,8,10],
+            pageSize:2,
+            pageNumber:1,
+            sidePagination:'server',//分页方式：client客户端分页，server服务端分页（*
+            striped:true,
+            queryParams:function(){
+                return{
+                    page: this.pageNumber,
+                    rows: this.pageSize,
+                }
+            },
+            columns:[
+                {checkbox:true},
+                {field:"picture",title:"汽车封面",formatter:function(value,row,index){
+                        return '<img src="'+value+'" width="50px" height="50px" />';
+                    }},
+                /*{field:"id",title:"汽车编号"},*/
+                {field:"carname",title:"汽车名称"},
+                {field:"fabudate",title:"发布时间"},
+                {field:"mileage",title:"公里数"},
+                {field:"color",title:"颜色"},
+                /*{field:"carAge",title:"车龄"},
+                {field:"seating",title:"座位数"},
+                {field:"displacement",title:"排量"},
+                {field:"effluentStandard",title:"排放标准"},*/
+                {field:"price",title:"价格"},
+                {field:"cz",title:"操作",formatter:function(value,row,index){
+                        return '<button onclick="delCarAll('+row.id+')" type="button" class="btn btn-info "><i class="glyphicon glyphicon-paperclip"></i>  删除</button>';
+
+                    }}
+            ]
+        })
+    }
+
+    $('.date').datetimepicker({
+        language: 'zh-CN',//显示中文
+        format: 'yyyy-mm-dd hh:ii:ss',//显示格式
+        minView: "month",//设置只显示到月份
+        initialDate: new Date(),//初始化当前日期
+        autoclose: true,//选中自动关闭
+        todayBtn: true//显示今日按钮
+    });
+</script>
+
+</html>

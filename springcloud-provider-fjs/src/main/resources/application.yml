@@ -1,0 +1,23 @@
+server:
+  port: 8854
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.12:3306/car?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+
+  application:
+    name: provider-fjs
+
+mybatis:
+  mapper-locations: classpath:mybatis/*.xml
+
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8848/eureka

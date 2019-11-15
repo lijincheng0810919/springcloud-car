@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- jquery -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../js/bootstrap/css/bootstrap.css">
+    <!-- 树 -->
+    <script src="../js/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="stylesheet" href="../js/bootstrap-treeview/bootstrap-treeview.min.css">
+    <!-- 选项卡 -->
+    <script src="../js/bootStrap-addTabs/bootstrap.addtabs.js"></script>
+    <link rel="stylesheet" href="../js/bootStrap-addTabs/bootstrap.addtabs.css">
+    <!-- 表格 -->
+    <script src="../js/bootstrap-table/bootstrap-table.js"></script>
+    <!-- 表格中文 -->
+    <script src="../js/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+    <link rel="stylesheet" href="../js/bootstrap-table/bootstrap-table.css">
+    <!-- 时间 -->
+    <script src="../js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <!-- 时间中文 -->
+    <script src="../js/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <link rel="stylesheet" href="../js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+    <!-- 引入弹框的js -->
+    <script src="../js/bootstrap-bootbox/bootbox.js"></script>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <div id="navTree"></div>
+        </div>
+        <div class="col-md-10">
+            <div id="myTabs">
+                <!-- 新选项卡 -->
+                <ul class="nav nav-tabs" id="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#home" role="tab" data-toggle="tab">首页</a>
+                    </li>
+                </ul>
+                <!-- 选项卡下内容 -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function(){
+        queryTree();
+    })
+    function queryTree(){
+        /*$.post('../zly/queryTree',{},function(data){
+            $("#navTree").treeview({
+                color:"#000000",
+                backColor:"#ffffff",
+                data:data,
+                onNodeSelected:function(e,n){
+                    $.addtabs.add({
+                        id:n.id,
+                        title:n.text,
+                        url:"../"+n.path,
+
+                    })
+                }
+            })
+
+        })*/
+
+        $.ajax({
+            url:"../zly/queryTree",
+            type:"post",
+            success:function(data){
+                $("#navTree").treeview({
+                    data:data,
+                    onNodeSelected:function(event, node) {
+                        $.addtabs({iframeHeight: 650});
+                        $.addtabs.add({
+                            id:node.id,
+                            title:node.text,
+                            url:node.path
+                        })
+                    }
+                })
+            }
+        })
+    }
+</script>
+</html>

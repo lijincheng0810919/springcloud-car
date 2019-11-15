@@ -1,0 +1,29 @@
+server:
+  port: 8853
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://192.168.1.23:27017/1903a
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.12:3306/car?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+
+  application:
+    #Ӧ������
+    name: provider-zly
+
+mybatis:
+  #mybatisxml�ļ��ĵ�ַ
+  mapper-locations: classpath:mybatis/*.xml
+  #showsql
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+eureka:
+  client:
+    #eureka�����ַ
+    service-url:
+      defaultZone: http://localhost:8848/eureka

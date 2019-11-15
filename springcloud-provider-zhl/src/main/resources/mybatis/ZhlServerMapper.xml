@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.dao.ZhlServerDao">
+
+    <insert id="addUser" parameterType="com.jk.model.UserBean" keyProperty="id" useGeneratedKeys="true">
+        insert into t_user(username,password,email,phone,realname,idenity,sex)
+        values(#{username},#{password},#{email},#{phone},#{realname},#{idenity},#{sex})
+    </insert>
+
+    <insert id="addBank" parameterType="com.jk.model.BankCardBean" >
+        insert into t_bankcard(userid,bankid,bankNo) values(#{userid},#{bankid},#{bankNo})
+    </insert>
+
+</mapper>

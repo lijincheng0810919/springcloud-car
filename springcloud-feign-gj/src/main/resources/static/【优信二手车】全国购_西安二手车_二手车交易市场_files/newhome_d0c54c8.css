@@ -1,0 +1,411 @@
+/*!newcar-www:static/css/home/jquery-ui.min.css*/
+/*! jQuery UI - v1.11.2 - 2014-11-25
+* http://jqueryui.com
+* Includes: core.css, autocomplete.css, menu.css, theme.css
+* To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Trebuchet%20MS%2CTahoma%2CVerdana%2CArial%2Csans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=f6a828&bgTextureHeader=gloss_wave&bgImgOpacityHeader=35&borderColorHeader=e78f08&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=eeeeee&bgTextureContent=highlight_soft&bgImgOpacityContent=100&borderColorContent=dddddd&fcContent=333333&iconColorContent=222222&bgColorDefault=f6f6f6&bgTextureDefault=glass&bgImgOpacityDefault=100&borderColorDefault=cccccc&fcDefault=1c94c4&iconColorDefault=ef8c08&bgColorHover=fdf5ce&bgTextureHover=glass&bgImgOpacityHover=100&borderColorHover=fbcb09&fcHover=c77405&iconColorHover=ef8c08&bgColorActive=ffffff&bgTextureActive=glass&bgImgOpacityActive=65&borderColorActive=fbd850&fcActive=eb8f00&iconColorActive=ef8c08&bgColorHighlight=ffe45c&bgTextureHighlight=highlight_soft&bgImgOpacityHighlight=75&borderColorHighlight=fed22f&fcHighlight=363636&iconColorHighlight=228ef1&bgColorError=b81900&bgTextureError=diagonals_thick&bgImgOpacityError=18&borderColorError=cd0a0a&fcError=ffffff&iconColorError=ffd27a&bgColorOverlay=666666&bgTextureOverlay=diagonals_thick&bgImgOpacityOverlay=20&opacityOverlay=50&bgColorShadow=000000&bgTextureShadow=flat&bgImgOpacityShadow=10&opacityShadow=20&thicknessShadow=5px&offsetTopShadow=-5px&offsetLeftShadow=-5px&cornerRadiusShadow=5px
+* Copyright 2014 jQuery Foundation and other contributors; Licensed MIT */
+.ui-helper-hidden{display:none}
+.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}
+.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}
+.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}
+.ui-helper-clearfix:after{clear:both}
+.ui-helper-clearfix{min-height:0}
+.ui-helper-zfix{width:100%;height:100%;top:0;left:0;position:absolute;opacity:0;filter:Alpha(Opacity=0)}
+.ui-front{z-index:100}
+.ui-state-disabled{cursor:default!important}
+.ui-icon{display:block;text-indent:-99999px;overflow:hidden;background-repeat:no-repeat}
+.ui-widget-overlay{position:fixed;top:0;left:0;width:100%;height:100%}
+.ui-autocomplete{position:absolute;top:0;left:0;cursor:default}
+.ui-menu{list-style:none;padding:0;margin:0;display:block;outline:0}
+.ui-menu .ui-menu{position:absolute}
+.ui-menu .ui-menu-item{position:relative;margin:0;padding:3px 1em 3px .4em;cursor:pointer;min-height:0;list-style-image:url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")}
+.ui-menu .ui-menu-divider{margin:5px 0;height:0;font-size:0;line-height:0;border-width:1px 0 0}
+.ui-menu .ui-state-focus,.ui-menu .ui-state-active{margin:-1px}
+.ui-menu-icons{position:relative}
+.ui-menu-icons .ui-menu-item{padding-left:2em}
+.ui-menu .ui-icon{position:absolute;top:0;bottom:0;left:.2em;margin:auto 0}
+.ui-menu .ui-menu-icon{left:auto;right:0}
+.ui-widget{font-family:Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;font-size:1.1em}
+.ui-widget .ui-widget{font-size:1em}
+.ui-widget input,.ui-widget select,.ui-widget textarea,.ui-widget button{font-family:Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;font-size:1em}
+.ui-widget-content{border:1px solid #ddd;background:#eee url(//s5.xinstatic.com/static/newcar-www/css/home/images/ui-bg_highlight-soft_100_eeeeee_1x100_c964ee6.png) 50% top repeat-x;color:#333}
+.ui-widget-content a{color:#333}
+.ui-widget-header{border:1px solid #e78f08;background:#f6a828 url(//s5.xinstatic.com/static/newcar-www/css/home/images/ui-bg_gloss-wave_35_f6a828_500x100_4a36f58.png) 50% 50% repeat-x;color:#fff;font-weight:700}
+.ui-widget-header a{color:#fff}
+.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default{border:1px solid #ccc;background:#f6f6f6 url(//s6.xinstatic.com/static/newcar-www/css/home/images/ui-bg_glass_100_f6f6f6_1x400_8e06448.png) 50% 50% repeat-x;font-weight:700;color:#1c94c4}
+.ui-state-default a,.ui-state-default a:link,.ui-state-default a:visited{color:#1c94c4;text-decoration:none}
+.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus{border:1px solid #f7f7f7;background:#f2f2f2;color:#3c3c3c;border-radius:4px}
+.ui-state-hover a,.ui-state-hover a:hover,.ui-state-hover a:link,.ui-state-hover a:visited,.ui-state-focus a,.ui-state-focus a:hover,.ui-state-focus a:link,.ui-state-focus a:visited{color:#c77405;text-decoration:none}
+.ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active{border:1px solid #fbd850;background:#fff url(//s4.xinstatic.com/static/newcar-www/css/home/images/ui-bg_glass_65_ffffff_1x400_ab528d1.png) 50% 50% repeat-x;font-weight:700;color:#eb8f00}
+.ui-state-active a,.ui-state-active a:link,.ui-state-active a:visited{color:#eb8f00;text-decoration:none}
+.ui-state-highlight,.ui-widget-content .ui-state-highlight,.ui-widget-header .ui-state-highlight{border:1px solid #fed22f;background:#ffe45c url(//s5.xinstatic.com/static/newcar-www/css/home/images/ui-bg_highlight-soft_75_ffe45c_1x100_efa2ce1.png) 50% top repeat-x;color:#363636}
+.ui-state-highlight a,.ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a{color:#363636}
+.ui-state-error,.ui-widget-content .ui-state-error,.ui-widget-header .ui-state-error{border:1px solid #cd0a0a;background:#b81900 url(//s4.xinstatic.com/static/newcar-www/css/home/images/ui-bg_diagonals-thick_18_b81900_40x40_e53dba7.png) 50% 50% repeat;color:#fff}
+.ui-state-error a,.ui-widget-content .ui-state-error a,.ui-widget-header .ui-state-error a{color:#fff}
+.ui-state-error-text,.ui-widget-content .ui-state-error-text,.ui-widget-header .ui-state-error-text{color:#fff}
+.ui-priority-primary,.ui-widget-content .ui-priority-primary,.ui-widget-header .ui-priority-primary{font-weight:700}
+.ui-priority-secondary,.ui-widget-content .ui-priority-secondary,.ui-widget-header .ui-priority-secondary{opacity:.7;filter:Alpha(Opacity=70);font-weight:400}
+.ui-state-disabled,.ui-widget-content .ui-state-disabled,.ui-widget-header .ui-state-disabled{opacity:.35;filter:Alpha(Opacity=35);background-image:none}
+.ui-state-disabled .ui-icon{filter:Alpha(Opacity=35)}
+.ui-icon{width:16px;height:16px}
+.ui-icon,.ui-widget-content .ui-icon{background-image:url(//s6.xinstatic.com/static/newcar-www/css/home/images/ui-icons_222222_256x240_a1b3887.png)}
+.ui-widget-header .ui-icon{background-image:url(//s5.xinstatic.com/static/newcar-www/css/home/images/ui-icons_ffffff_256x240_e3f4748.png)}
+.ui-state-default .ui-icon{background-image:url(//s6.xinstatic.com/static/newcar-www/css/home/images/ui-icons_ef8c08_256x240_1eec256.png)}
+.ui-state-hover .ui-icon,.ui-state-focus .ui-icon{background-image:url(//s6.xinstatic.com/static/newcar-www/css/home/images/ui-icons_ef8c08_256x240_1eec256.png)}
+.ui-state-active .ui-icon{background-image:url(//s6.xinstatic.com/static/newcar-www/css/home/images/ui-icons_ef8c08_256x240_1eec256.png)}
+.ui-state-highlight .ui-icon{background-image:url(//s6.xinstatic.com/static/newcar-www/css/home/images/ui-icons_228ef1_256x240_73044fe.png)}
+.ui-state-error .ui-icon,.ui-state-error-text .ui-icon{background-image:url(//s5.xinstatic.com/static/newcar-www/css/home/images/ui-icons_ffd27a_256x240_c1a79bd.png)}
+.ui-icon-blank{background-position:16px 16px}
+.ui-icon-carat-1-n{background-position:0 0}
+.ui-icon-carat-1-ne{background-position:-16px 0}
+.ui-icon-carat-1-e{background-position:-32px 0}
+.ui-icon-carat-1-se{background-position:-48px 0}
+.ui-icon-carat-1-s{background-position:-64px 0}
+.ui-icon-carat-1-sw{background-position:-80px 0}
+.ui-icon-carat-1-w{background-position:-96px 0}
+.ui-icon-carat-1-nw{background-position:-112px 0}
+.ui-icon-carat-2-n-s{background-position:-128px 0}
+.ui-icon-carat-2-e-w{background-position:-144px 0}
+.ui-icon-triangle-1-n{background-position:0 -16px}
+.ui-icon-triangle-1-ne{background-position:-16px -16px}
+.ui-icon-triangle-1-e{background-position:-32px -16px}
+.ui-icon-triangle-1-se{background-position:-48px -16px}
+.ui-icon-triangle-1-s{background-position:-64px -16px}
+.ui-icon-triangle-1-sw{background-position:-80px -16px}
+.ui-icon-triangle-1-w{background-position:-96px -16px}
+.ui-icon-triangle-1-nw{background-position:-112px -16px}
+.ui-icon-triangle-2-n-s{background-position:-128px -16px}
+.ui-icon-triangle-2-e-w{background-position:-144px -16px}
+.ui-icon-arrow-1-n{background-position:0 -32px}
+.ui-icon-arrow-1-ne{background-position:-16px -32px}
+.ui-icon-arrow-1-e{background-position:-32px -32px}
+.ui-icon-arrow-1-se{background-position:-48px -32px}
+.ui-icon-arrow-1-s{background-position:-64px -32px}
+.ui-icon-arrow-1-sw{background-position:-80px -32px}
+.ui-icon-arrow-1-w{background-position:-96px -32px}
+.ui-icon-arrow-1-nw{background-position:-112px -32px}
+.ui-icon-arrow-2-n-s{background-position:-128px -32px}
+.ui-icon-arrow-2-ne-sw{background-position:-144px -32px}
+.ui-icon-arrow-2-e-w{background-position:-160px -32px}
+.ui-icon-arrow-2-se-nw{background-position:-176px -32px}
+.ui-icon-arrowstop-1-n{background-position:-192px -32px}
+.ui-icon-arrowstop-1-e{background-position:-208px -32px}
+.ui-icon-arrowstop-1-s{background-position:-224px -32px}
+.ui-icon-arrowstop-1-w{background-position:-240px -32px}
+.ui-icon-arrowthick-1-n{background-position:0 -48px}
+.ui-icon-arrowthick-1-ne{background-position:-16px -48px}
+.ui-icon-arrowthick-1-e{background-position:-32px -48px}
+.ui-icon-arrowthick-1-se{background-position:-48px -48px}
+.ui-icon-arrowthick-1-s{background-position:-64px -48px}
+.ui-icon-arrowthick-1-sw{background-position:-80px -48px}
+.ui-icon-arrowthick-1-w{background-position:-96px -48px}
+.ui-icon-arrowthick-1-nw{background-position:-112px -48px}
+.ui-icon-arrowthick-2-n-s{background-position:-128px -48px}
+.ui-icon-arrowthick-2-ne-sw{background-position:-144px -48px}
+.ui-icon-arrowthick-2-e-w{background-position:-160px -48px}
+.ui-icon-arrowthick-2-se-nw{background-position:-176px -48px}
+.ui-icon-arrowthickstop-1-n{background-position:-192px -48px}
+.ui-icon-arrowthickstop-1-e{background-position:-208px -48px}
+.ui-icon-arrowthickstop-1-s{background-position:-224px -48px}
+.ui-icon-arrowthickstop-1-w{background-position:-240px -48px}
+.ui-icon-arrowreturnthick-1-w{background-position:0 -64px}
+.ui-icon-arrowreturnthick-1-n{background-position:-16px -64px}
+.ui-icon-arrowreturnthick-1-e{background-position:-32px -64px}
+.ui-icon-arrowreturnthick-1-s{background-position:-48px -64px}
+.ui-icon-arrowreturn-1-w{background-position:-64px -64px}
+.ui-icon-arrowreturn-1-n{background-position:-80px -64px}
+.ui-icon-arrowreturn-1-e{background-position:-96px -64px}
+.ui-icon-arrowreturn-1-s{background-position:-112px -64px}
+.ui-icon-arrowrefresh-1-w{background-position:-128px -64px}
+.ui-icon-arrowrefresh-1-n{background-position:-144px -64px}
+.ui-icon-arrowrefresh-1-e{background-position:-160px -64px}
+.ui-icon-arrowrefresh-1-s{background-position:-176px -64px}
+.ui-icon-arrow-4{background-position:0 -80px}
+.ui-icon-arrow-4-diag{background-position:-16px -80px}
+.ui-icon-extlink{background-position:-32px -80px}
+.ui-icon-newwin{background-position:-48px -80px}
+.ui-icon-refresh{background-position:-64px -80px}
+.ui-icon-shuffle{background-position:-80px -80px}
+.ui-icon-transfer-e-w{background-position:-96px -80px}
+.ui-icon-transferthick-e-w{background-position:-112px -80px}
+.ui-icon-folder-collapsed{background-position:0 -96px}
+.ui-icon-folder-open{background-position:-16px -96px}
+.ui-icon-document{background-position:-32px -96px}
+.ui-icon-document-b{background-position:-48px -96px}
+.ui-icon-note{background-position:-64px -96px}
+.ui-icon-mail-closed{background-position:-80px -96px}
+.ui-icon-mail-open{background-position:-96px -96px}
+.ui-icon-suitcase{background-position:-112px -96px}
+.ui-icon-comment{background-position:-128px -96px}
+.ui-icon-person{background-position:-144px -96px}
+.ui-icon-print{background-position:-160px -96px}
+.ui-icon-trash{background-position:-176px -96px}
+.ui-icon-locked{background-position:-192px -96px}
+.ui-icon-unlocked{background-position:-208px -96px}
+.ui-icon-bookmark{background-position:-224px -96px}
+.ui-icon-tag{background-position:-240px -96px}
+.ui-icon-home{background-position:0 -112px}
+.ui-icon-flag{background-position:-16px -112px}
+.ui-icon-calendar{background-position:-32px -112px}
+.ui-icon-cart{background-position:-48px -112px}
+.ui-icon-pencil{background-position:-64px -112px}
+.ui-icon-clock{background-position:-80px -112px}
+.ui-icon-disk{background-position:-96px -112px}
+.ui-icon-calculator{background-position:-112px -112px}
+.ui-icon-zoomin{background-position:-128px -112px}
+.ui-icon-zoomout{background-position:-144px -112px}
+.ui-icon-search{background-position:-160px -112px}
+.ui-icon-wrench{background-position:-176px -112px}
+.ui-icon-gear{background-position:-192px -112px}
+.ui-icon-heart{background-position:-208px -112px}
+.ui-icon-star{background-position:-224px -112px}
+.ui-icon-link{background-position:-240px -112px}
+.ui-icon-cancel{background-position:0 -128px}
+.ui-icon-plus{background-position:-16px -128px}
+.ui-icon-plusthick{background-position:-32px -128px}
+.ui-icon-minus{background-position:-48px -128px}
+.ui-icon-minusthick{background-position:-64px -128px}
+.ui-icon-close{background-position:-80px -128px}
+.ui-icon-closethick{background-position:-96px -128px}
+.ui-icon-key{background-position:-112px -128px}
+.ui-icon-lightbulb{background-position:-128px -128px}
+.ui-icon-scissors{background-position:-144px -128px}
+.ui-icon-clipboard{background-position:-160px -128px}
+.ui-icon-copy{background-position:-176px -128px}
+.ui-icon-contact{background-position:-192px -128px}
+.ui-icon-image{background-position:-208px -128px}
+.ui-icon-video{background-position:-224px -128px}
+.ui-icon-script{background-position:-240px -128px}
+.ui-icon-alert{background-position:0 -144px}
+.ui-icon-info{background-position:-16px -144px}
+.ui-icon-notice{background-position:-32px -144px}
+.ui-icon-help{background-position:-48px -144px}
+.ui-icon-check{background-position:-64px -144px}
+.ui-icon-bullet{background-position:-80px -144px}
+.ui-icon-radio-on{background-position:-96px -144px}
+.ui-icon-radio-off{background-position:-112px -144px}
+.ui-icon-pin-w{background-position:-128px -144px}
+.ui-icon-pin-s{background-position:-144px -144px}
+.ui-icon-play{background-position:0 -160px}
+.ui-icon-pause{background-position:-16px -160px}
+.ui-icon-seek-next{background-position:-32px -160px}
+.ui-icon-seek-prev{background-position:-48px -160px}
+.ui-icon-seek-end{background-position:-64px -160px}
+.ui-icon-seek-start{background-position:-80px -160px}
+.ui-icon-seek-first{background-position:-80px -160px}
+.ui-icon-stop{background-position:-96px -160px}
+.ui-icon-eject{background-position:-112px -160px}
+.ui-icon-volume-off{background-position:-128px -160px}
+.ui-icon-volume-on{background-position:-144px -160px}
+.ui-icon-power{background-position:0 -176px}
+.ui-icon-signal-diag{background-position:-16px -176px}
+.ui-icon-signal{background-position:-32px -176px}
+.ui-icon-battery-0{background-position:-48px -176px}
+.ui-icon-battery-1{background-position:-64px -176px}
+.ui-icon-battery-2{background-position:-80px -176px}
+.ui-icon-battery-3{background-position:-96px -176px}
+.ui-icon-circle-plus{background-position:0 -192px}
+.ui-icon-circle-minus{background-position:-16px -192px}
+.ui-icon-circle-close{background-position:-32px -192px}
+.ui-icon-circle-triangle-e{background-position:-48px -192px}
+.ui-icon-circle-triangle-s{background-position:-64px -192px}
+.ui-icon-circle-triangle-w{background-position:-80px -192px}
+.ui-icon-circle-triangle-n{background-position:-96px -192px}
+.ui-icon-circle-arrow-e{background-position:-112px -192px}
+.ui-icon-circle-arrow-s{background-position:-128px -192px}
+.ui-icon-circle-arrow-w{background-position:-144px -192px}
+.ui-icon-circle-arrow-n{background-position:-160px -192px}
+.ui-icon-circle-zoomin{background-position:-176px -192px}
+.ui-icon-circle-zoomout{background-position:-192px -192px}
+.ui-icon-circle-check{background-position:-208px -192px}
+.ui-icon-circlesmall-plus{background-position:0 -208px}
+.ui-icon-circlesmall-minus{background-position:-16px -208px}
+.ui-icon-circlesmall-close{background-position:-32px -208px}
+.ui-icon-squaresmall-plus{background-position:-48px -208px}
+.ui-icon-squaresmall-minus{background-position:-64px -208px}
+.ui-icon-squaresmall-close{background-position:-80px -208px}
+.ui-icon-grip-dotted-vertical{background-position:0 -224px}
+.ui-icon-grip-dotted-horizontal{background-position:-16px -224px}
+.ui-icon-grip-solid-vertical{background-position:-32px -224px}
+.ui-icon-grip-solid-horizontal{background-position:-48px -224px}
+.ui-icon-gripsmall-diagonal-se{background-position:-64px -224px}
+.ui-icon-grip-diagonal-se{background-position:-80px -224px}
+.ui-corner-all,.ui-corner-top,.ui-corner-left,.ui-corner-tl{border-top-left-radius:4px}
+.ui-corner-all,.ui-corner-top,.ui-corner-right,.ui-corner-tr{border-top-right-radius:4px}
+.ui-corner-all,.ui-corner-bottom,.ui-corner-left,.ui-corner-bl{border-bottom-left-radius:4px}
+.ui-corner-all,.ui-corner-bottom,.ui-corner-right,.ui-corner-br{border-bottom-right-radius:4px}
+.ui-widget-overlay{background:#666 url(//s6.xinstatic.com/static/newcar-www/css/home/images/ui-bg_diagonals-thick_20_666666_40x40_990deda.png) 50% 50% repeat;opacity:.5;filter:Alpha(Opacity=50)}
+.ui-widget-shadow{margin:-5px 0 0 -5px;padding:5px;background:#000 url(//s5.xinstatic.com/static/newcar-www/css/home/images/ui-bg_flat_10_000000_40x100_5b28031.png) 50% 50% repeat-x;opacity:.2;filter:Alpha(Opacity=20);border-radius:5px}
+.ui-xin-suggest-result{background:#fff;z-index:80;font:400 14px/30px "Microsoft YaHei";color:#333;border:1px solid #e5e5e5;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px}
+.ui-xin-suggest-result li{line-height:40px;height:40px;padding:0 20px!important}
+/*!newcar-www:static/css/home/sellerbrand.css*/
+.seller-wrap{width:1210px;height:501px;margin:20px auto;position:relative}
+.bd-home-ad_text{position:absolute;left:98px;top:17px}
+.seller-wrap .seller-title-bar{width:1210px;height:138px}
+.seller-title-bar h3{line-height:45px;font-size:22px;color:#1b1b1b;width:100%}
+.seller-wrap .seller-title-bar .bar{height:102px;border-right:1px solid #ebebeb;position:relative;display:inline-block;max-width:1209px}
+.seller-wrap .seller-title-bar p{position:absolute;top:99px;left:0;width:151px;height:2px;border-top:2px solid #f60}
+.seller-title-bar a{display:block;width:150px;height:100px;font-size:18px;color:#838383;border:1px solid #ebebeb;border-right:0;float:left;text-align:center}
+.seller-title-bar a img{display:block;height:55px;margin:22.5px auto}
+.seller-title-bar a span.txt{display:block;line-height:100px}
+.seller-title-bar h3 .more{float:right;color:#ff5a37;height:45px;line-height:45px;font-size:14px;border:0!important;text-align:right}
+.seller-title-bar h3 .more:hover{text-decoration:underline}
+.seller-car-list{display:none;margin-right:-7px;padding:10px 0 30px}
+.seller-car-list .hulu-pic{margin-top:8px;width:1210px;height:303px}
+.seller-car-list .hulu-pic:hover{transform:translate3d(0,-2px,0);box-shadow:0 15px 30px rgba(0,0,0,.1)}
+.seller-car-list dd{margin-top:8px;width:295px;height:303px;margin-right:7px;border:1px solid #ebebeb;float:left;position:relative;transition:all .2s linear}
+.seller-car-list dd:hover{transform:translate3d(0,-2px,0);box-shadow:0 15px 30px rgba(0,0,0,.1)}
+.seller-car-list .no-margin-right{margin-right:0!important}
+.seller-car-list dd img{display:block;width:295px;height:194px}
+.seller-car-list dd h4{font-size:14px;color:#585858;width:265px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:15px 15px 10px}
+.seller-car-list dd p{padding-left:15px;font-size:18px;color:#ff5a37}
+.seller-car-list dd b{font-size:16px;font-weight:400}
+.seller-car-list dd .btm{display:block;height:30px;width:263px;padding:0 15px;line-height:30px;font-size:12px;color:#999;border-top:1px solid #ebebeb;position:absolute;left:0;bottom:0}
+.seller-car-list dd a.benz:after{content:"";width:62px;height:60px;background:url(//s4.xinstatic.com/xin/images/shop/ic_y.png) no-repeat;display:inline-block;position:absolute;top:128px;right:5px}
+.seller-car-list dd a.new-benz-logo:after{content:"";width:60px;height:60px;background:url(//s5.xinstatic.com/xin/images/shop/new-benz-logo.jpg) no-repeat;display:inline-block;position:absolute;top:129px;right:5px}
+.seller-car-list dd .bz-icon,.market-list .bz-icon{width:60px;height:60px;background:url(//s6.xinstatic.com/xin/images/shop/new-benz-logo.jpg) no-repeat;position:absolute;bottom:118px;right:10px}
+.seller-car-list dd .other-icon,.market-list .other-icon{width:62px;height:60px;background:url(//s4.xinstatic.com/xin/images/shop/ic_y.png) no-repeat;position:absolute;bottom:118px;right:10px}
+/*!newcar-www:widget/home/banner/banner.css*/
+@import url(//s4.xinstatic.com/static/newcar-www/widget/home/banner/newyear_a387672.css);.seo{display:none}
+.MD-home-banner-banner{width:100%;height:722px;min-width:1210px;position:relative}
+.MD-home-banner-banner-link{display:block;height:722px;min-width:1210px}
+.MD-home-banner-search{width:862px;height:50px;position:absolute;top:292px;left:50%;margin-left:-432px;overflow:hidden;z-index:9}
+.MD-home-banner-ipt{width:499px;height:24px;line-height:24px;font-size:16px;border:0;color:#333;background:#fff;outline:0;padding:13px 22px;float:left}
+.MD-home-banner-car-btn{float:left;width:147px;height:50px;line-height:50px;font-size:18px;color:#fff;text-align:center}
+.MD-home-banner-search-btn{background:#ff5a37}
+.MD-home-banner-sell-btn{float:right;background:#ff9000}
+.MD-home-banner-num{width:100%;font-size:22px;color:#1a1a1a;text-align:center;position:absolute;top:381px}
+.MD-home-banner-randomNum{padding:0 8px}
+.mt-number-animate{height:22px;font-size:22px;line-height:22px;overflow:hidden;display:inline-block;vertical-align:top;color:#1a1a1a;position:relative}
+.mt-number-animate .mt-number-animate-dom{width:14px;text-align:center;color:#1a1a1a;float:left;position:relative;top:0}
+.mt-number-animate .mt-number-animate-dot{width:5px;line-height:22px;float:left;color:#1a1a1a;text-align:center}
+.mt-number-animate .mt-number-animate-dom .mt-number-animate-span{width:100%;float:left}
+/*!newcar-www:widget/home/banner/newyear.css*/
+.MD-home-banner-newyear .MD-home-banner-car-btn{border:1px solid #fff;box-sizing:border-box}
+.MD-home-banner-newyear .MD-home-banner-num{color:#fff}
+.MD-home-banner-newyear .mt-number-animate-dot{color:#fff}
+.MD-home-banner-newyear .mt-number-animate-dom{color:#fff}
+/*!newcar-www:widget/home/quick/quick.css*/
+.MD-home-quick-quick{width:1208px;height:284px;background:#fff;border:1px solid #ebebeb;position:absolute;top:435px;left:50%;margin-left:-605px}
+.MD-home-quick-brand{width:606px;height:284px;float:left}
+.MD-home-quick-price{width:304px;height:284px;float:left}
+.MD-home-quick-modal{width:298px;height:284px;float:left}
+.MD-home-quick-brand-box{width:560px}
+.MD-home-quick-price-box{width:279px}
+.MD-home-quick-modal-box{width:275px;border-top:1px solid #ebebeb;border-right:0}
+.MD-home-quick-title{display:block;height:62px;line-height:62px;text-align:center;font-size:16px;color:#585858}
+.MD-home-quick-brand-title{width:200px;position:relative;margin:0 auto}
+.MD-home-quick-price-title{width:304px}
+.MD-home-quick-modal-title{width:301px}
+.MD-home-quick-brand-icon{width:12px;height:11px;background:url(//s6.xinstatic.com/static/newcar-www/widget/home/quick/imgs/home-arrow_43b14eb.png) no-repeat;position:absolute;top:26px;left:120px}
+.MD-home-quick-link{font-size:14px;float:left;width:33.33%;text-align:center;color:#585858}
+.MD-home-quick-content{height:222px;border:solid #ebebeb;border-width:1px 1px 0 0;padding:0 4%}
+.MD-home-quick-content a:hover,.MD-home-quick-bold{color:#ff5a37}
+.MD-home-quick-brand-link{width:16.6%;margin:0 auto}
+.MD-home-quick-price-link{margin-top:45px}
+.MD-home-quick-brand-img{width:44px;height:44px;display:block;margin:28px auto 8px}
+.MD-home-quick-modal-img{width:73px;height:29px;display:block;margin:36px auto 15px}
+.MD-home-quick-brand-all{width:1210px;height:506px;position:absolute;top:-1px;left:-1px;z-index:99;display:none}
+.MD-home-quick-category-title{width:606px;height:60px;line-height:60px;color:#ff5a37;text-indent:-1px;position:absolute;top:0;left:0;border:2px solid #ff5a37;border-bottom:0;background:#fff;z-index:1}
+.MD-home-quick-category-icon{width:12px;height:11px;background:url(//s5.xinstatic.com/static/newcar-www/widget/home/quick/imgs/home-arrow-up_0518d78.png) no-repeat;position:absolute;top:25px;right:270px}
+.MD-home-quick-all{width:1126px;padding:30px 40px;background:#fff;border:2px solid #ff5a37;position:absolute;top:60px;left:0}
+.MD-home-quick-brand-more{width:375px;overflow:hidden;float:left}
+.MD-home-quick-brand-more dl{width:350px;line-height:24px;margin:10px auto 0;overflow:hidden}
+.MD-home-quick-brand-left dl{margin-top:10px;float:left}
+.MD-home-quick-brand-center dl{margin:10px auto 0}
+.MD-home-quick-brand-right dl{margin-top:10px;margin-left:25px;float:right}
+.MD-home-quick-brand-more dt{font-size:14px;color:#ff5a37;width:20px;line-height:24px;float:left}
+.MD-home-quick-brand-more dd{width:330px;float:left}
+.MD-home-quick-brand-more dd a{display:block;float:left;line-height:24px;font-size:13px;color:#333;margin-right:15px;white-space:nowrap}
+/*!newcar-www:widget/home/nav/nav.css*/
+.MD-home-nav-nav{width:1210px;position:relative;height:45px;border-bottom:1px solid #ebebeb;overflow:hidden}
+.MD-home-nav-nav-title{line-height:45px;font-size:22px;color:#1b1b1b;width:138px;text-align:left;float:left;font-weight:400}
+.MD-home-nav-tab-title{float:left;height:45px;line-height:45px;font-size:18px;color:#585858;margin-right:40px}
+.MD-home-nav-line{position:absolute;bottom:0;left:138px;width:54px;height:2px;background:#ff5a37;transition:all .1s ease}
+.MD-home-nav-more{float:right;height:45px;line-height:45px;font-size:14px;color:#ff5a37}
+.MD-home-nav-more:hover{text-decoration:underline}
+/*!newcar-www:widget/home/half-process/half-process.css*/
+.MD-home-half-process-half-price{display:block;width:1210px;height:45px;padding:25px 0;background:url(//s4.xinstatic.com/static/newcar-www/widget/home/half-process/imgs/bg_1cd5f50.jpg) no-repeat;overflow:hidden}
+.MD-home-half-process-half-process{float:left;width:357px;height:45px;padding-left:45px;border-right:1px solid #fec3b6;overflow:hidden}
+.MD-home-half-process-num{float:left;width:40px;height:40px;line-height:40px;border:2px solid #fff;font-size:20px;color:#fff;margin-right:13px;text-align:center;border-radius:100%}
+.MD-home-half-process-tit{font-size:18px;line-height:28px;color:#fff;display:block}
+.MD-home-half-process-txt{font-size:14px;color:#fff;display:block}
+.MD-home-half-process-no-line{border:0}
+/*!newcar-www:widget/home/half/half.css*/
+.wrap{width:1210px;margin:50px auto 0;overflow:hidden}
+.MD-home-half-half{display:none}
+.MD-home-half-half-list{overflow:hidden}
+.MD-home-half-car-list{display:table;float:left;width:345px;height:165px;padding-right:87px;vertical-align:middle}
+.MD-home-half-nopr{padding-right:0}
+.MD-home-half-left,.MD-home-half-right{display:table-cell;vertical-align:middle}
+.MD-home-half-brands{display:block;width:130px;font-size:18px;line-height:32px;color:#585858}
+.MD-home-half-price{font-size:18px;color:#333;font-weight:400}
+.MD-home-half-blod{font-size:30px;color:#ff5a37}
+.MD-home-half-pic{width:190px;margin-left:15px;transition:all 300ms ease}
+.MD-home-half-car-list:hover>.MD-home-half-right img{margin-left:0}
+/*!newcar-www:widget/home/uxin/uxin.css*/
+.MD-home-uxin-uxin{height:346px}
+.MD-home-uxin-car-list{margin:8px -7px 0 0;padding:10px 0 30px;display:none;overflow:hidden}
+.MD-home-uxin-car-info{width:295px;border:1px solid #ebebeb;float:left;margin-right:7px;transition:all .2s linear}
+.MD-home-uxin-car-list .MD-home-uxin-car-info:hover{transform:translate3d(0,-2px,0);box-shadow:0 15px 30px rgba(0,0,0,.1)}
+.MD-home-uxin-lazyload{width:100%;height:197px;display:block}
+.MD-home-uxin-ename{line-height:53px;color:#585858;padding:0 17px;overflow:hidden}
+.MD-home-uxin-price{float:right;color:#ff5a37}
+/*!newcar-www:widget/home/zg/zg.css*/
+.MD-home-zg-zg{overflow:visible;margin-top:16px}
+.MD-home-zg-more{float:right;height:45px;line-height:45px;font-size:14px;color:#ff5a37}
+.MD-home-zg-tit{font-size:22px;height:45px;line-height:45px;color:#1b1b1b;font-weight:400}
+.MD-home-zg-banner{display:block;width:100%;cursor:pointer}
+/*!newcar-www:widget/home/qa/qa.css*/
+.MD-home-qa-qa{width:100%;padding:50px 0;background:#f6f6f6}
+.MD-home-qa-qa-area{width:1210px;height:490px;margin:0 auto}
+.MD-home-qa-left{float:left;width:480px;height:490px;background:#fff;transition:all .2s linear}
+.MD-home-qa-left:hover,.MD-home-qa-click:hover{transform:translate3d(0,-2px,0);box-shadow:0 15px 30px rgba(0,0,0,.1)}
+.MD-home-qa-qa-hot{display:block;width:480px;height:320px;position:relative}
+.MD-home-qa-tag,.tag{display:block;width:60px;line-height:30px;color:#fff;font-size:16px;position:absolute;top:10px;left:-15px;z-index:9;text-align:center}
+.MD-home-qa-hot-tag,.hot-tag{background:#ff5a38}
+.MD-home-qa-qa-pic{display:block;width:100%}
+.MD-home-qa-ad-little-icon{position:absolute;bottom:10px;right:15px;display:none}
+.MD-home-qa-tit{display:block;width:428px;padding:0 30px;font-size:18px;color:#fff;line-height:60px;position:absolute;bottom:0;left:0;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.MD-home-qa-qa-list{padding:12px 30px 0}
+.MD-home-qa-list-txt{font-size:14px;color:#333;line-height:36px;display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.MD-home-qa-right{width:680px;height:490px;float:right}
+.MD-home-qa-click{width:680px;height:230px;background:#fff;transition:all .2s linear;position:relative;display:table}
+.MD-home-qa-article-click{margin-top:30px}
+.MD-home-qa-book-tag{background:#389fff}
+.MD-home-qa-art-tag{background:#2ecbac}
+.MD-home-qa-imgs{display:block;width:245px;height:230px}
+.MD-home-qa-right-tit{display:table-cell;padding:0 30px;vertical-align:middle}
+.MD-home-qa-right-title{display:block;font-size:16px;color:#333;margin-bottom:15px;width:390px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+.MD-home-qa-right-desc{font-size:14px;color:#666;line-height:30px;white-space:normal;word-break:break-all;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:5}
+/*!newcar-www:widget/home/story/story.css*/
+.MD-home-story-story{width:100%;height:925px;padding:50px 0}
+.MD-home-story-tit{font-size:32px;color:#333;text-align:center;font-weight:400}
+.MD-home-story-txt{font-size:16px;color:#666;line-height:24px;text-align:center;font-weight:400}
+.MD-home-story-story-list{width:1210px;height:800px;margin:auto;background:url(//s5.xinstatic.com/static/newcar-www/widget/home/story/imgs/map_e9cd61d.png) no-repeat center;position:relative}
+.MD-home-story-biao{display:block;width:50px;height:33px;background:url(//s5.xinstatic.com/static/newcar-www/widget/home/story/imgs/arrow_icon_63641fa.png) no-repeat center top;text-align:center;font-weight:400}
+.MD-home-story-self-right .MD-home-story-biao{position:absolute;left:30px;top:111px}
+.MD-home-story-self-left .MD-home-story-biao{position:absolute;right:30px;top:111px;font-size:14px;color:#333}
+.MD-home-story-introduce{display:block;width:462px;height:145px;cursor:default}
+.MD-home-story-position-one{position:absolute;left:319px;top:95px}
+.MD-home-story-position-two{position:absolute;left:720px;top:251px}
+.MD-home-story-position-three{position:absolute;left:107px;top:280px}
+.MD-home-story-position-four{position:absolute;left:709px;top:426px}
+.MD-home-story-position-five{position:absolute;left:194px;top:485px}
+.MD-home-story-story-self{width:430px;height:80px;padding:15px;border:1px solid #e4e4e6;background:#fff;display:none}
+.MD-home-story-radius{float:left;width:80px;height:80px;border-radius:100%}
+.MD-home-story-self-left .MD-home-story-radius{float:right}
+.MD-home-story-pic{display:block;width:80px;height:80px;border-radius:100%}
+.MD-home-story-story-txt{width:335px;height:72px;margin-top:5px;font-size:14px;overflow:hidden;text-overflow:ellipsis;color:#333;line-height:24px}
+.MD-home-story-self-right .MD-home-story-story-txt{margin-left:15px;float:right}
+.MD-home-story-self-left .MD-home-story-story-txt{margin-right:15px;float:left}
+/*!newcar-www:widget/home/bottom_banner/bottom_banner.css*/
+.MD-home-bottom_banner-bottom_banner{padding-bottom:50px}
+/*!newcar-www:widget/home/bargain/bargain.css*/
+.MD-home-bargain-p-bargain-pop{z-index:1000;width:766px;height:718px}
+.MD-home-bargain-p-bargain-pop-close{position:absolute;left:50%;bottom:40px;width:39px;height:40px;margin-left:-20px;background:url(//s5.xinstatic.com/static/newcar-www/widget/home/bargain/imgs/bargain-close_b19eaee.png) no-repeat}
+.MD-home-bargain-p-small-bargain{width:132px;height:118px;position:fixed;bottom:6px;right:350px;background:url(//s6.xinstatic.com/static/newcar-www/widget/home/bargain/imgs/bargain-small-bg_b72c85b.png) no-repeat}
+.MD-home-bargain-p-small-bargain-text{width:132px;height:118px;display:block;background:url(//s4.xinstatic.com/static/newcar-www/widget/home/bargain/imgs/bargain-small-text_483880a.png) no-repeat}
+@keyframes myfirst{from{background:url(//s4.xinstatic.com/static/newcar-www/widget/home/bargain/imgs/bargain-small-text_483880a.png) no-repeat}
+to{background:url(//s6.xinstatic.com/static/newcar-www/widget/home/bargain/imgs/bargain-small-text2_9b0c9a9.png) no-repeat}}
+.MD-home-bargain-p-small-bargain-text{animation:myfirst .5s;animation-iteration-count:infinite}

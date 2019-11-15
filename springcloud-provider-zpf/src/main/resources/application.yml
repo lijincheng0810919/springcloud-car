@@ -1,0 +1,26 @@
+server:
+  port: 8851
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/1904a7?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+
+  application:
+    #应用名称
+    name: provider-zpf
+
+mybatis:
+  #mybatisxml文件的地址
+  mapper-locations: classpath:mybatis/*.xml
+  #showsql
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+eureka:
+  client:
+    #eureka服务地址
+    service-url:
+      defaultZone: http://localhost:8848/eureka

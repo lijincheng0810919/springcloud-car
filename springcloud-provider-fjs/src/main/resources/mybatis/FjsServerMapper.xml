@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.dao.FjsServerDao">
+
+    <!--新增-->
+    <insert id="findCarBean" parameterType="com.jk.model.CarBean" keyProperty="id" keyColumn="id" useGeneratedKeys="true">
+         insert into t_car(beandid,carname,fabudate,mileage,color,carAge,carTypeId,seating,displacement,effluentStandard,
+                           fuelTypeId,carCityid,picture,status) values(
+                           #{beandid},#{carname},#{fabudate},#{mileage},#{color},#{carAge},#{carTypeId},
+                           #{seating},#{displacement},#{effluentStandard},#{fuelTypeId},#{carCityid},#{picture},#{status}
+                           )
+    </insert>
+    
+    <!--count-->
+    <select id="findCarBean" resultType="int">
+        select count(1) from t_car t;
+    </select>
+
+    <select id="findCarList" resultType="com.jk.model.CarBean">
+        select * from t_car t limit
+        #{start} , #{rows};
+    </select>
+</mapper>

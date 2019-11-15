@@ -1,0 +1,36 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: zuul
+
+eureka:
+  client:
+    #eureka服务地址
+    service-url:
+      defaultZone: http://localhost:8848/eureka
+
+#以/api-a/开头的请求都转发给service-feign服务；        
+#以/api-b/ 开头的请求都转发给service-ribbon服务；    
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: client-feign-gj
+    api-b:
+      path: /api-b/**
+      serviceId: client-feign-zyf
+    api-c:
+      path: /api-c/**
+      serviceId: client-feign-zpf
+    api-d:
+      path: /api-d/**
+      serviceId: client-feign-zhl
+    api-e:
+      path: /api-e/**
+      serviceId: client-feign-zly
+    api-f:
+      path: /api-f/**
+      serviceId: client-feign-fjs
+
