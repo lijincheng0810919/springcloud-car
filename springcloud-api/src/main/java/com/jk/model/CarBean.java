@@ -14,7 +14,7 @@ import java.util.Date;
 public class CarBean {
 
     @Id
-    private Integer id;
+    private String id;
     private Integer beandid; // 品牌ID
     private String carname;  //车名称
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -31,7 +31,40 @@ public class CarBean {
     private Integer userid; //用户id
     private String picture; //图片
     private String status; // 1 待审核  2 审核通过  3
-    private double price;//价格
+    private Double price;//价格
+
+    // 临时字段  价格
+    private Double startPrice;
+    private Double endPrice;
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Double getStartPrice() {
+        return startPrice;
+    }
+
+    public void setStartPrice(Double startPrice) {
+        this.startPrice = startPrice;
+    }
+
+    public Double getEndPrice() {
+        return endPrice;
+    }
+
+    public void setEndPrice(Double endPrice) {
+        this.endPrice = endPrice;
+    }
 
     public Integer getUserid() {
         return userid;
@@ -57,14 +90,6 @@ public class CarBean {
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public Integer getBeandid() {

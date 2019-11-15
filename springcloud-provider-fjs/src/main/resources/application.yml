@@ -4,9 +4,14 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.1.12:3306/car?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://127.0.0.1:3306/shun?useUnicode=true&characterEncoding=utf-8
     username: root
-    password: root
+    password: 1234
+  data:
+    mongodb:
+      host: 192.168.1.23
+      port: 27017
+      database: 1903a
 
   application:
     name: provider-fjs

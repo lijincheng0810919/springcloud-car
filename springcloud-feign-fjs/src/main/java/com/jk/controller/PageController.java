@@ -13,6 +13,6 @@ public class PageController {
 
     @RequestMapping("toIndex")
     public String findIndex(){
-        return "index1";
+        return "list";
     }
 }

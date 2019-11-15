@@ -17,12 +17,7 @@ public class FjsServerController {
     @Autowired
     private FjsServerService fjsServerService;
 
-    public String test(){
-        return  fjsServerService.test();
-    }
-
     @GetMapping("findCarBean")
-    @ResponseBody
     public HashMap<String ,Object> findCarBean(Integer page , Integer rows , CarBean carBean){
         return fjsServerService.findCar(page,rows,carBean);
     }
