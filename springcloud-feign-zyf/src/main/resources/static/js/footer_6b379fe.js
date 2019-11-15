@@ -1,0 +1,1 @@
+define("newcar-www:static/js/common/footer.es6",function(o,n,_){function f(){$(".n_f_m_app img,.n_f_m_wx img,.n_f_m_i img").lazyload()}_.exports={footerIcoLazyload:f}});

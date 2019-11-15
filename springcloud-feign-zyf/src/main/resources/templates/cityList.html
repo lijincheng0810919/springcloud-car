@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <ul class="MD-c2b_sale_new-city_choose-city-choose-list-ul">
+            <li class="MD-c2b_sale_new-city_choose-city-choose-list-li MD-c2b_sale_new-city_choose-jq-city-choose-list-li" th:each="city,userStat:${list}">
+                <a href="javascript:;" th:text="${city.cityName}"></a>
+            </li>
+        </ul>
+</body>
+</html>

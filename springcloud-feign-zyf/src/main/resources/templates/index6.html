@@ -1,0 +1,894 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>【官方】优信二手车下载_官方app客户端-优信二手车</title>
+        <meta http-equiv="Access-Control-Allow-Origin" content="http://car.xin.com">
+        <meta name="keywords" content="优信二手车app,优信二手车官方app下载,优信二手车客户端">
+        <meta name="description" content="优信二手车app，个人车源快速出售多卖25%，海量优质车源供您挑选买辆放心的二手车，最便捷安全的二手车买卖系统，优信二手车官方app下载">
+                        <meta property="qc:admins" content="151402520760166375">
+        <meta name="mobile-agent" content="format=html5;">
+        <link rel="canonical" href="static/css/css">
+        
+        <script src="static/js/jquery-1.8.1.min.js" type="text/javascript"></script>
+        <script src="static/js/SuperSlide.js"></script>
+        <script src="static/js/jquery.cookie.js" type="text/javascript"></script>
+        <script src="static/js/mod_2b1d325.js"></script>
+        <script src="static/js/footer_6b379fe.js"></script>
+        <script src="static/js/jquery.lazyload.min_2181a45.js"></script>
+        <script src="static/js/jsencrypt.min_5c2c8c6.js" type="text/javascript"></script>
+        <script>
+            (function (window , jsvar) {
+                jsvar.XIN_STATIC_DOMAIN_A = '//s4.xinstatic.com',
+                jsvar.XIN_STATIC_DOMAIN_E = '//s5.xinstatic.com',
+                jsvar.XIN_STATIC_DOMAIN_F = '//s6.xinstatic.com',
+                jsvar.cssjs_version = '17112101';
+                jsvar.rsaPublicKey = 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDQ4cGnnWenRjInefoHxp99woyN0kLTAKlgSaHuZ+AlW4tfQud+4MWxk2gq36854XO6XJ4E2py0F3Xi9Kf+uI+7Xv78F4UUiJ3slsBlGp7ywihEXE/Awo+m4t+NKx7foh2jIMbDoVGjTNNORiPVqI8rHWURZUUljQqbbWqZHXkSWwIDAQAB';
+            })(window, (window.jsvar = window.jsvar || {}));
+        </script>
+        <script src="static/js/fix_url_params.src_72c83e9.js"></script>
+        <script type="text/javascript">
+            var TOP_INFO = { location: { }, user: { }, half_city: [], url: '' };
+            var TOP_GET = { };
+                                    var is_from_wap = /[?|&]from=wap/.test(window.location.search);
+
+            //from wap记录cookie
+            if (is_from_wap) {
+                $.cookie('access_from', 'wap', { path: '/', expires: 0 });
+            }
+            if ($.cookie('access_from') == 'wap') {
+                is_from_wap = true;
+            }
+
+            //手机端自动跳转
+            if (!is_from_wap && /Android|iP[ao]d|iPhone/gi.test(navigator.userAgent)) {
+                var reg = new RegExp("/*?" + TOP_INFO.location.ename, "g");
+                var path = window.location.pathname.replace(reg, '');
+                var param = window.location.search;
+
+                //特别页面跳转
+                var con_name = 'app';
+                var act_name = 'index';
+                var mdomain = '//m.xin.com';
+                if(!/^https?/.test(mdomain)){
+                    mdomain = ('https:' == document.location.protocol ? 'https:' : 'http:') + mdomain;
+                }
+                //首页跳转
+                if (con_name == 'home' && act_name == 'index') {
+                    window.location.href = mdomain + location.pathname + param;
+                } else if (con_name == 'search' && act_name == 'fullprice') { // 全价车
+                    var reg = new RegExp (/^\//);
+                    if(reg.test(location.pathname)){
+                        window.location.href = mdomain + location.pathname + param;
+                    }else{
+                        window.location.href = mdomain + '/' + location.pathname + param;
+                    }
+                } else if (con_name == 'search' && act_name == 'halfprice') { //付一半跳转
+                    var uri = location.pathname.replace('/h/', '/');
+                    uri = uri.indexOf('sn_') != -1 ? uri.replace('sn_', 'sn_v5') : uri + 'sn_v5/';
+                    window.location.href = mdomain + uri + param;
+                }else if (con_name == 'car' && act_name == 'index'){
+                    window.location.href = mdomain + path + param;
+                //商铺页跳转
+                }else if (con_name == 'dealer' && act_name == 'index') {
+                    window.location.href = mdomain + path + param;
+                //文章详情页跳转
+                }else if (con_name == 'article' && act_name == 'view') {
+                    var act_arr = window.location.pathname.split('/');
+                    for (i = act_arr.length - 1; i >= 0; i--) {
+                        if (!!act_arr[i]) {
+                            window.location.href = mdomain + '/article/article_detail/' + act_arr[i] + param;
+                            break;
+                        }
+                    }
+                }else if (con_name == 'article' && act_name == 'listing') { //活动列表页面跳转
+                    var act_arr = window.location.pathname.split('/');
+                    for (i = act_arr.length - 1; i >= 0; i--) {
+                        if (!!act_arr[i]) {
+                            window.location.href = mdomain + '/article/index/' + act_arr[i] + param;
+                            break;
+                        }
+                    }
+                }
+            }
+            
+            // 初始化诸葛统计数据参数
+            var is_hf = ''=='halfprice' ? 1 : 0;
+            var search_q = '';
+            var search_ot = ''.indexOf('y1') != -1 ? '全国其他城市' : (''.indexOf('y2') != -1 ? '周边城市' : '');
+            var search_count = '';
+            var zg_page_flag = 0;
+
+            //可信网站
+            function KNET_change(eleId) {
+                var str= document.getElementById(eleId).href;
+                var str1 =str.substring(0,(str.length-6));
+                str1+=KNET_RndNum(6); 
+                document.getElementById(eleId).href=str1;
+            }
+            function KNET_RndNum(k) {
+                var rnd=""; 
+                for (var i=0;i < k;i++) {
+                    rnd+=Math.floor(Math.random()*10); 
+                }
+                return rnd;
+            }
+            function win_add_pageid(num){
+                window.pageid = num;
+            }
+        </script>
+        <link href="static/css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+        <link href="static/css/base-17112101.css" rel="stylesheet" type="text/css">
+        <link href="static/css/common-17112101.css" rel="stylesheet" type="text/css">
+       <!--  <link href="static/css/popup-17112101.css" rel="stylesheet" type="text/css">
+       <link href="static/css/page2016-17112101.css" rel="stylesheet" type="text/css"> -->
+        <link href="static/css/popup_13ca24d.css" rel="stylesheet" type="text/css">
+        <link href="static/css/page2016_0ab3bfd.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="static/css/city-17112101.css">
+        <link href="static/css/footer-17112101.css" rel="stylesheet">
+        <link href="static/css/joinus_header_9053cee.css" rel="stylesheet" type="text/css">
+        <link href="static/css/joinus_footer_9377482.css" rel="stylesheet" type="text/css">
+        <script src="static/js/popup-17112101.js" type="text/javascript"></script>
+        <script src="static/js/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="static/js/tab-17112101.js"></script>
+        <!-- <script id="mainPageScript" src="static/js/main_page-17112101.js" data-no-location=""></script> -->
+        <script id="mainPageScript" src="static/js/main_page_f752250.js" data-no-location=""></script>
+        <script src="static/js/city-17112101.js"></script>
+        <script>
+        //var suggest = null;
+        </script>
+        
+<link rel="stylesheet" href="static/css/app-up_bce8162.css">
+<script type="text/javascript">
+    $(window).scroll(function(){  
+        var Height = $(this).scrollTop();
+        if(Height>=3050 && Height<=3200) {
+                $("img.b_pic").animate({ left:'50px' },1500);	
+        }
+        else if(Height>=2400 && Height<=2600){
+                $(".dLoad-p4 img").animate({ left:'-80px' },1500);
+        }
+        else if(Height>=550){
+                $("#service").show();
+        }
+        else if(Height<=550){
+                $("#service").hide();
+        }
+   })
+    window.__ab2__= {
+        pid:"u2_10"
+    };
+</script>
+
+        <script>
+            $('#regA').click(function () {
+                _hmt.push(['_trackEvent', 'Register', 'Register_start']);
+            });
+            $('.noregist').click(function () {
+                _hmt.push(['_trackEvent', 'Register', 'Register_start']);
+            });
+            $('#loginA').click(function () {
+                _hmt.push(['_trackEvent', 'Login', 'Login_manual']);
+            });            
+        </script>
+            </head>
+    
+            
+    <body>
+        
+        
+                    <div class="_ckcity" data-cityname="quangguo" data-type="1" style="display:none"></div>
+            <!--20141203新版头部开始-->
+            <div class="fixed-head-wrap ">
+                <div class="fixed-head rel">
+                                        <a href="index.html" class="fixed-logo" title="【优】质诚【信】二手车交易平台"></a>
+                                                                                <dl class="select-city fixed-city abs" id="citySelect" style="display:none;" data-hide="1">
+                        <dt id='current_city_id'>&nbsp;&nbsp;</dt>
+                    </dl>
+                                        <ul class="nav-list fixed-list abs">
+                        <li><a class="" href="index.html" title="quanguo二手车首页">首页</a></li>
+                        <!--是买车但非长尾页的时候才标红（active）买车-->
+                        <li><a class="a_buypage " href="index1.html" sname="//www.xin.com" title="购买二手车" rel="nofollow">买车</a></li>
+                        <li><a class="a_sellpage " href="javascript:;" title="二手车出售" rel="nofollow">卖车</a></li>
+                        <li class="rel" class='php_li_half' id="li_halfprice"><a id='php_half_city_link' class="" href="javascript:;" sname="//www.xin.com" title="首付一成 分期付款" rel="nofollow">分期购</a></li>
+                        <li><a class=" a_question" href="javascript:;" title="知心推荐 问题答疑" rel="nofollow">宝典</a></li>
+                        <li><a href="javascript:;" class=" a_service" title="优信二手车服务保障" rel="nofollow">服务保障</a></li>
+                        <li><a id="id_dl_app" href="" title="优信二手车手机APP" target="_blank" rel="nofollow">APP下载</a></li>
+                        <li id="xin_top_userinfo" sname="//www.xin.com"></li>
+                    </ul>
+                </div>
+            </div>
+                
+        
+<div class="new-up-wrap1 new-up-wrap">
+    <div class="up">
+        <div class="down down_shop">
+            <!-- 商城客户端 -->
+            <a href="javascript:;"></a>
+            <!-- 商家客户端 -->
+            <a href="javascript:;"></a> 
+        </div>
+        <a href="javascript:void(0);" onclick="show_popup('#dloadPage', '.closeJs');"><img src="static/picture/button-17112101.png" alt="优信二手车官方APP下载"></a>
+        <img src="static/picture/1008.jpg" class="code" alt="优信二手车官方APP下载二维码">
+    </div>
+</div>
+<div class="new-up-wrap2 new-up-wrap">
+    <div class="content">
+        <div class="tips">优信金牌认证 平台质保</div>
+        <p>通过六项严苛审查为您甄选靠谱车源</p>
+        <p>30天包退，一年保修承诺为您保驾护航</p>
+    </div>
+</div>
+<div class="new-up-wrap3 new-up-wrap">
+    <div class="content">
+        <div class="tips">全国直购 全新购车体验</div>
+        <p>异地看车和过户，流程太繁琐？优信帮您解决车辆运输和手续</p>
+        <p>办理，省时省心。足不出户，全国低价好车随你挑。</p>
+    </div>
+</div>
+<div class="new-up-wrap4 new-up-wrap">
+    <div class="content">
+        <div class="tips">毫秒级极速体验</div>
+        <p>提升图片下载速度，高清车图秒刷</p>
+    </div>
+</div>
+<div class="new-up-wrap5 new-up-wrap">
+    <div class="content">
+        <div class="tips">搜索优化</div>
+        <p>搜索页面视觉优化，界面更清爽，搜索操作更加便捷</p>
+    </div>
+</div>
+<div class="new-up-wrap6 new-up-wrap">
+    <div class="content">
+        <div class="tips">线上签署电子合同</div>
+        <p>省时省心，方便高效</p>
+    </div>
+</div>
+<div class="new-up-wrap7 new-up-wrap">
+    <div class="content">
+        <h1>更多APP独有特色功能</h1>
+        <span>
+            <img src="static/picture/p5_icon1-17112101.png">
+            权威精准多维度的车辆估价
+        </span>
+        <span>
+            <img src="static/picture/p5_icon2-17112101.png">
+            供您查询63个车辆品牌的全国4S店保修保养与事故维修记录
+        </span>
+        <span>
+            <img src="static/picture/p5_icon3-17112101.png">
+            便捷免费的违章查询
+        </span>
+        <span>
+            <img src="static/picture/p5_icon4-17112101.png">
+            售前售中售后您提问优信专家解答，二手车百科带来购车无顾虑，零距离
+        </span>
+    </div>
+</div>
+<!--左侧滚动开始-->
+<div id="service" style="display:none;">
+    <a href="javascript:void(0);" onclick="show_popup('#dloadPage', '.closeJs');" class="srv6"><b></b>下载</a>
+    <a href="javascript:void(0)" class="goTop d-icon b" id="goTop" title="返回顶部"></a>
+</div>
+<!--左侧滚动结束-->
+<script type="text/javascript">
+        // 返回顶部按钮自动换色
+    $(window).scroll(function(){
+        if ($(window).scrollTop()>10){
+            $('#goTop').addClass("goTopHover");
+            $('.fixed-head-wrap').addClass("addShadow");
+        } else if ($(window).scrollTop() < 10) {
+            $('#goTop').removeClass("goTopHover");
+            $('.fixed-head-wrap').removeClass("addShadow");
+            ;
+        }
+    });
+
+    $('#goTop').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 200);
+    });
+</script>
+<!--下载页面开始-->
+<div class="popup-wrap" id="dloadPage">
+    <div class="inner">
+        <div class="dload-con">
+            <h2>请根据手机类型下载</h2>
+            <a href="#" class="ico_pop xBtn2 closeJs">关闭</a>
+            <div class="con-nav">
+                <a href="javascript:void(0)" hidefocus="true" class="tab1 active"></a>
+                <a href="javascript:void(1)" hidefocus="true" class="tab2"></a>
+                <a href="javascript:void(2)" hidefocus="true" class="tab3"></a>
+            </div>
+            <div class="TabCon c-con1">
+                <div class="code-qr">
+                    <img src="static/picture/1007.jpg">
+                    <p>手机扫描二维码下载</p>
+                </div>
+                <div class="code-edt">
+                    <a href="javascript:;">立即下载</a>
+                    <!-- <p>V4.5版本</p>
+                    <p>更新时间：2015.12.01</p> -->
+                    <p>需要Android2.3以上系统</p>
+                </div>
+            </div>
+            <div class="TabCon c-con2" style="display:none;">
+                <div class="code-qr">
+                    <img src="static/picture/1007.jpg">
+                    <p>手机扫描二维码下载</p>
+                </div>
+                <div class="code-edt">
+                    <a href="javascript:;">立即下载</a>
+                    <!-- <p>V4.5版本</p>
+                    <p>更新时间：2015.12.01</p> -->
+                    <p>需要iOS7.0以上系统</p>
+                </div>
+            </div>
+            <div class="TabCon c-con3" style="display:none;">
+                <div class="code-qr">
+                    <img src="static/picture/m.jpg">
+                    <p>手机扫描二维码浏览</p>
+                </div>
+                <div class="code-edt">
+                    <p>使用手机浏览器输入以下地址</p>
+                    <p>或扫描左侧二维码</p>
+                    <img src="static/picture/dload_input-17112101.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--下载页面结束-->
+
+        
+                            <!--温馨提示开始-->
+<div class="popup-wrap" id="warmTip10">
+    <div class="inner">
+        <div class="tip-con">
+            <p>温馨提示<a href="javascript:;" class="close_pop closeJs abs"></a></p>
+            <img src="static/picture/people.png">
+            <span class="span_xin_msg">出错啦</span>
+        </div>
+    </div>
+</div>
+<div class="n_f_m">
+    <div class="n_f_m_c">
+        <a href="index51.html" rel="nofollow">关于我们</a>
+        
+        <a href="index52.html" rel="nofollow">加入我们</a>
+        <a href="index53.html" rel="nofollow">帮助中心</a>
+        <a href="index54.html" rel="nofollow">用户反馈</a>
+        <!-- <a href="http://dealer.xin.com/login/" id="apply_dealer" rel="nofollow" nopass="1">商家申请</a> -->
+        <!-- <a href="http://www.youxinjinrong.com/" rel="nofollow" nopass="1">优信易购</a> -->
+		<a href="sitemap1.html">网站地图</a>
+        <a href="index55.html" class="@nav-btn">Investors</a>
+        <!-- <a href="https://www.xin.com/aboutus/index/16/" class="@nav-btn">公告</a> -->
+        <a href="index56.html" class="@nav-btn">检测设备介绍</a>
+        
+        <div class="n_f_m_wx">
+            <img src="static/picture/default.png" data-original="static/picture/code-17112101.jpg" height="100" width="100">
+            <p>
+                <span class="n_f_m_tit0">微信公众号</span><br>
+                <span class="n_f_m_tit1">资讯动态早知道</span>
+            </p>
+        </div>
+        <div class="n_f_m_app">
+            <img src="static/picture/default.png" data-original="static/picture/1001.jpg" height="100" width="100">
+            <p>
+            <span class="n_f_m_tit0">APP下载</span><br>
+            <span class="n_f_m_tit1">车源更新不错过</span>
+            </p>
+        </div>
+    </div>
+        <div class="n_f_m_i">
+        <p>业务合作单位：优信拍（北京）二手车鉴定评估有限公司</p>
+        <p>权利声明：本网站对展示的车辆信息、检测报告、视频、图片等内容享有合法权利，属于优信集团的重要经营资源，未经许可，不得非法转载、复制等方式使用。</p>
+        <p>Copyright © 2015-2019 优估 All Rights Reserved    版权所有 优估(上海) 信息科技有限公司<a href="javascript:;" class="tel">联系电话：021-10106088</a></p>
+        <p class="n_f_m_b">
+            <a rel="nofollow" href="javascript:;" nopass="1" target="window">沪ICP备15036207号-2</a>
+            <a rel="nofollow" href="javascript:;" nopass="1" target="_blank"><img data-original="static/picture/gongan.png" src="static/picture/default.png" width="20" height="20"> 京公网安备 11010502034103号</a>
+            <a rel="nofollow" href="javascript:;">沪通信管自贸【2018】21号</a>
+            <a href="javascript:;" target="_blank">
+                广播电视节目制作经营许可证：（京）字第07856号
+            </a>
+            <a href="javascript:;" target="_blank">
+                网络文化经营许可证：京网文【2017】 4097-460号
+            </a>
+        </p>
+        <div class="n_f_m_credit">
+            <a rel="nofollow" href="javascript:;" nopass="1" target="_blank"><img data-original="static/picture/url_wx-17112101.png" src="static/picture/default.png" width="117" height="42"></a>
+            <a rel="nofollow" href="javascript:;" nopass="1" target="_blank"><img data-original="static/picture/knetSealLogo.png" src="static/picture/default.png" width="117" height="42"></a>
+            <a rel="nofollow" href="javascript:;" nopass="1" target="_blank"><img data-original="static/picture/bot_logo2.png" src="static/picture/default.png" width="117" height="42"></a>
+            <a rel="nofollow" href="javascript:;" nopass="1" target="_blank"><img data-original="static/picture/bot_logo3.png" src="static/picture/default.png" width="117" height="42"></a>
+            <a rel="nofollow" href="javascript:;" nopass="1" target="_blank"><img data-original="static/picture/5c35686b00ead372284.png" src="static/picture/default.png" style="width:auto;"></a>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $('.n_f_m_more').on('click',function() {
+            $(this).parent().toggleClass('n_f_m_expand');
+        });
+    });
+</script>
+                <!-- 弹窗页面 -->
+                <div class="popup-wrap" id="popupLogin">
+	<div class="inner">
+		<div class="popup-con2 con-height2">
+		    <span class="pop-title">登录</span>
+		    <a href="javascript:void(0)" class="ico_pop xBtn2 closeJs">关闭</a>
+		    <div class="logintab">
+				<a href="javascript:void(1)" hidefocus="true" class="active" data-i="0">短信验证码登录</a>
+	            <a href="javascript:void(0)" hidefocus="true" data-i="1">网站密码登录</a>
+		    </div>
+			<ul class="register logincon">
+				<li>
+				    <input type="text" class="ipt-box tel-bg" value="请输入手机号" id="search1" autocomplete="off">
+				</li>
+				<li class="code-input" style="display:none">
+				    <input type="text" class="code" value="请输入图片码" id="piccode_l" autocomplete="off">
+				    <a class="PageNum"></a>
+				</li>
+				<li>
+				    <input type="text" class="code" value="六位数字验证码" id="search2" autocomplete="off">
+				    <input type="button" class="getNum vm" id="need_code1" value="获取验证码">
+				</li>
+			</ul>
+			<ul class="register logincon hide" style="overflow: hidden;">
+				<li>
+			    <input type="text" class="ipt-box tel-bg" value="请输入手机号" id="search" autocomplete="off">
+				</li>
+				<li>
+				    <input type="text" class="code" value="请输入图片码" id="piccode_r" autocomplete="off">
+				    <a class="PageNum"></a>
+				</li>
+				<li>
+				<input type="text" class="ipt-box code-bg" value="6-20位，数字、字母、符号的组合" id="psw5" autocomplete="off">
+				<input type="password" autocomplete="new-password" class="ipt-box code-bg hide" value="" id="psw6">
+				</li>
+			</ul>
+			<div class="btn-div">
+				<a href="javascript:void(0)" class="resBtn" id="login_btn">登录</a>
+			</div>
+			<div class="popBot abs">
+				<!-- 去掉第三方登录 -->
+				<!-- <div class="loginWith fl">
+					<span>第三方登录：</span>
+					<a href="/openapi/authqq" class="ico_pop tqq"  rel="nofollow"></a>
+					<a href="http://openapi.baidu.com/oauth/2.0/authorize?response_type=code&client_id=Ug5Vh2SRNiSueexjtBi95Grs&redirect_uri=http%3A%2F%2Fwww.xin.com%2Fopenapi%2Fbaidu_rd%2F&display=popup" class="ico_pop tbd" rel="nofollow"></a>
+					<a href="https://api.weibo.com/oauth2/authorize?client_id=415981803&redirect_uri=http%3A%2F%2Fwww.xin.com%2Fopenapi%2Findex%2F&response_type=code" class="ico_pop xwb"  rel="nofollow"></a>
+				 </div> -->
+				 <div class="forPass fr">
+					<a href='javascript:clear_invalid();$("#popupLogin").hide();show_popup("#forPass","#forPass .closeJs")' class="forPassA">忘记密码</a>
+					<a href='javascript:clear_invalid();$("#popupLogin").hide();show_popup("#popupRegister","#popupRegister .closeJs")' class="forPassSiwtch forPassRegister">还没注册</a>
+				 </div>
+		  </div>
+		</div>	
+	</div>
+</div>
+<div class="popup-wrap" id="forPass">
+	<div class="inner">
+		<div class="popup-con con-height3">
+		     <span class="pop-title">找回密码</span>
+		     
+		    <a href="javascript:void(0)" class="ico_pop xBtn2 closeJs">关闭</a>
+			<ul class="register">
+				<li>
+				<input type="text" class="ipt-box tel-bg" value="请输入手机号" id="search3"></li>
+				<li>
+				    <input type="text" class="code" value="请输入图片码" id="piccode_g">
+				    <a class="PageNum"></a>
+				</li>
+				<li>
+				    <input type="text" class="code" value="六位数字验证码" id="search4">
+				    <input type="button" class="getNum vm" id="need_code3" value="获取验证码">
+				</li>
+			</ul>
+			<div class="btn-div">
+				<a href="javascript:void(0)" class="resBtn" id="next_step">下一步</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup-wrap" id="forgetNext">
+   <div class="inner">
+         <div class="popup-con con-height3">
+		     <span class="pop-title">找回密码</span>
+			 
+		    <a href="javascript:void(0)" class="ico_pop xBtn2 closeJs">关闭</a>
+			<ul class="register">
+				<li>
+				    <input type="text" class="ipt-box code-bg" value="6-20位，数字、字母、符号的组合" id="psw7">
+				    <input type="password" class="ipt-box code-bg hide" value="" id="psw8">
+				</li>
+				<li>
+				    <input type="text" class="ipt-box code-bg" value="请与上面输入密码一致" id="psw9">
+				    <input type="password" class="ipt-box code-bg hide" value="" id="psw10">
+				</li>
+			</ul>
+			<div class="btn-div">
+				<a href="javascript:void(0)" class="resBtn" id="reset_passwd">提交</a>
+			</div>
+		</div>
+   </div>
+</div>
+<!-- 立即注册开始 -->
+<div class="popup-wrap" id="popupRegister">
+    <div class="inner">
+        <div class="popup-con con-height1">
+            <span class="pop-title">注册优信账号</span>
+            <a href="javascript:void(0);" class="ico_pop xBtn2 closeJs">关闭</a>
+            <ul class="register">
+                <li>
+                    <input type="text" class="ipt-box tel-bg" value="请输入手机号" id="register_mobile" autocomplete="off">
+                </li>
+                <li>
+                    <input type="text" class="code" value="请输入图片码" id="piccode_register" autocomplete="off">
+                    <a class="PageNum"></a>
+                </li>
+                <li>
+                    <input type="text" class="code" value="六位数字验证码" id="register_smscode" autocomplete="off">
+                    <input type="button" class="getNum vm" id="need_code5" value="获取验证码">
+                </li>
+                <li>
+                    <input type="password" class="ipt-box code-bg" id="register_psw" autocomplete="off">
+                    <em class="placeholder-em" style="display: block;">密码6-20位，数字、字母、符号的组合</em>
+                </li>
+            </ul>
+            <div class="btn-div btn-div-20160630">
+                <a href="javascript:void(0);" class="resBtn" id="register_btn">立即注册</a>
+            </div>
+            <div class="popBot abs">
+				<!-- 去掉第三方登录 -->
+                <!-- <div class="loginWith fl">
+                    <span>第三方登录：</span>
+                    <a href="/openapi/authqq" class="ico_pop tqq"  rel="nofollow"></a>
+                    <a href="http://openapi.baidu.com/oauth/2.0/authorize?response_type=code&client_id=Ug5Vh2SRNiSueexjtBi95Grs&redirect_uri=http%3A%2F%2Fwww.xin.com%2Fopenapi%2Fbaidu_rd%2F&display=popup" class="ico_pop tbd" rel="nofollow"></a>
+                    <a href="https://api.weibo.com/oauth2/authorize?client_id=415981803&redirect_uri=http%3A%2F%2Fwww.xin.com%2Fopenapi%2Findex%2F&response_type=code" class="ico_pop xwb"  rel="nofollow"></a>
+                 </div> -->
+                 <div class="forPass fr">
+                 <a href='javascript:clear_invalid();$("#popupRegister").hide();show_popup("#forPass","#forPass .closeJs")' class="forPassA">忘记密码</a>
+                 <a href='javascript:clear_invalid();$("#popupRegister").hide();show_popup("#popupLogin","#popupLogin .closeJs")' class="forPassSiwtch forPassLogin">直接登录</a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 立即注册结束 -->
+<div class="CarStandard popup-wrap" id="tReport">
+	<div class="CarSd-top">
+    	<a href="#" class="carGb closeJs CarSd-gb">关闭</a>
+    </div>
+    <div class="CarSd_head">
+        	<img src="static/picture/promise_mico.png">
+        	<span>无重大事故车辆</span>
+     </div>
+	<div class="CarSd-big">
+        <div class="CarSd_cur">
+            <dl>
+            	<dt>如符合下述9条中任何一条，即为不符合“ 车辆无重大事故标准“的车辆，即属于重大事故车：</dt>
+                <dd>1、经过撞击，损伤到发动机舱和驾驶舱的车辆。</dd>
+                <dd>2、车身后翼子板撞击损伤超过其三分之一的车辆。</dd>
+                <dd>3、纵梁有焊接、切割、整形、变形的车辆。</dd>
+                <dd>4、减振器座有焊接、切割、整形、变形的车辆。</dd>
+                <dd>5、ABC柱有焊接、切割、整形、变形的车辆。</dd>
+                <dd>6、因撞击造成汽车安全气囊弹出的车辆。</dd>
+                <dd>7、其它不可拆卸部份有严重的焊接、切割、整形、变形的车辆。</dd>
+                <dd>8、车身经水浸泡超过车身二分之一，或积水进入驾驶舱的车辆。</dd>
+                <dd>9、车身经火焚烧超过0.5平方米，经修复仍存在安全隐患的车辆。</dd>
+            </dl>
+            <img src="static/picture/car_pic2.png">
+            <p>（车辆关键部件图示）</p>
+        </div>
+        <div class="CarSd_foot">
+        	<p>不属于以上9种情况的车辆，即为符合“车辆无重大事故标准”的车辆，属于非重大事故车。</p>
+        </div>
+    </div>
+</div>
+<!--优学堂之我要提问-->
+<div class="popup-wrap" id="uAsk">
+	<div class="inner">
+		<div class="uxt-pop">
+		     <em>我要提问</em>
+			 <a href="#" class="ico_pop xBtn2 closeJs">关闭</a>
+			 <div class="detail">
+			 	<textarea id="suptare" maxlength="240" onkeydown='countChar("suptare","counter");' onkeyup='countChar("suptare","counter");' placeholder="请写下您的问题..."></textarea>
+			 	<p><span id="counter">0</span>/240</p>
+			 </div>
+			<div class="tag">
+			 	<p class="titTab">
+			 		
+			 	</p>
+			</div>
+			<p class="tip">选择标签可以帮助您快速找到问题 <span style="color:red"></span></p>
+			<a href="javascript:void(0)" class="submit-btn">提交问题</a>
+		</div>
+    </div>
+</div>
+
+<div class="popup-wrap" id="career_apply">
+	<div class="inner">
+		 <div class="suc-con clearfix">
+		 	<img src="static/picture/people.png">	
+		 	<p>恭喜您!提交成功~</p>
+		 	<a href="">确认</a>
+		 </div>
+    </div>
+</div>
+<script language="javascript"> 
+    function countChar(textarea,span) {
+        document.getElementById(span).innerHTML = document.getElementById(textarea).value.length; 
+    }
+    $('#uAsk').delegate('.simTab a', 'click', function(){
+        $('#uAsk .simTab a').removeClass('active');
+        $(this).addClass('active');
+    });
+    $('#uAsk .titTab').delegate('a:not(.active)', 'click', function(){
+        $('#uAsk .titTab a').removeClass('active');
+        $(this).addClass('active');
+        var thisIndex = $(this).index();
+        $('#uAsk .simTab').removeClass('active').hide();
+        $('#uAsk .simTab:eq('+thisIndex+')').addClass('active').show();
+        $('#uAsk .simTab a').removeClass('active');
+    });
+    $(function(){
+        $('#uAsk .submit-btn').on('click', function ajaxSubmit(){
+            var idArr = [];
+            var title = $('#suptare').val();
+            var pid = $('#uAsk .titTab .active').attr('data_type');
+            var idObj = $('#uAsk .simTab .active').each(function(){
+                idArr.push($(this).attr('data_type'));
+            });
+            var id = idArr.toString();
+            if (!title || !pid || !id) {
+                $('#uAsk .tip span').html('信息填写不完整');
+                return false;
+            }
+            var title_filter = title.match(/[a-zA-Z0-9\u4e00-\u9fa5]/g);
+            if (!title_filter || title_filter.length > 240 || title_filter.length < 6) {
+                $('#uAsk .tip span').html('标题长度应在6〜240个字');
+                return false;
+            }
+            $.ajax({
+                type: "POST",
+                url: "/qa/ask/",
+                data: { "title":title,"pid":pid,"id":id},
+                dataType: 'json',
+                beforeSend: function(){
+                    $('#uAsk .submit-btn').html('正在提交...');
+                    $('#uAsk .submit-btn').unbind('click');
+                },
+                success: function(data) {
+                    if (data.code == 1) {
+                        $('#uAsk,.shade').hide();
+                        $('#suptare').val('');
+                        $("#uAsk .titTab a").removeClass('active');
+                        $("#uAsk .titTab a:eq(0)").addClass('active');
+                        $('#uAsk .simTab').removeClass('active').hide();
+                        $('#uAsk .simTab:eq(0)').show();
+                        $('#uAsk .tip span').html('');
+                        // 170406 打点
+                        uxl_track('w_baodian/asking/submit');
+                    }else{
+                        $('#uAsk .tip span').html(data.message);
+                    }
+                    $('#uAsk .submit-btn').html('提交问题').on('click', ajaxSubmit);
+                },
+                error: function() {
+                    $('#uAsk .tip span').html('请求失败!');
+                    $('#uAsk .submit-btn').html('提交问题').on('click', ajaxSubmit);
+                }
+            });
+        });
+
+        $('#question_button').one('click', function(e){
+            e.stopPropagation();
+            if (!TOP_INFO.user.mobile){
+                return; //未登录的情况，不加载我要提问中的标签数据
+            }
+            $.ajax({
+                url: "/qa/get_category/",
+                dataType: "json",
+                success: function(data) {
+                    if(data && data.data && data.data[0]){
+                        for (var i in data.data[0]) {
+                            var type = data.data[0][i][0];
+                            if(!type || !data.data[0][i][1] || !data.data[type]) {
+                                continue;
+                            }
+                            //var index = type-1;
+                            if (i == 0) {
+                                var addclass = 'active';
+                                var display = '';
+                            } else {
+                                var addclass = '';
+                                var display = 'style="display:none;"';
+                            }
+                            
+                            $("#uAsk .titTab").append('<a href="javascript:void(0)" class="'+addclass+'" data_type='+type+'>'+data.data[0][i][1]+'</a>');
+                            var tag = '<p class="simTab ' + addclass + '"' + display +'>';
+                            for (var j in data.data[type]) {
+                                if(!data.data[type][j][0]) {
+                                    continue;
+                                }
+                                tag += '<a href="javascript:void(0)" data_type='+data.data[type][j][0]+'>'+data.data[type][j][1]+'</a>';
+                            }
+                            $("#uAsk .tag").append(tag + '</p>');
+                        }
+                    }
+                }
+            });
+        });
+    });
+</script>                <!--[if lte IE 6]>
+                <script src="static/js/DD_belatedPNG.js"></script>
+                <![endif]-->
+                    
+        
+
+<!--<script>var _abqVersion='17112101';var _abq=_abq||[];_abq.push(['_pageview']);!function(t,e){var a=t.createElement(e);a.async=!0,a.src=('https:'==t.location.protocol?'https://':'http://')+(location.hostname == 'www.xin.com' ? 'ab.xin.com' : 'ab.test.xin.com')+'/ab.js?v='+_abqVersion;var c=t.getElementsByTagName(e)[0];c.parentNode.insertBefore(a,c)}(document,'script');</script>-->
+
+<script src="static/js/newAb_e9e3cdc.js"></script>
+<script src="static/js/ab_5ecdcd2.js"></script>
+
+<script type="text/javascript">
+    var _abq = _abq || [];
+    _abq.push(['_pageview']);
+</script>
+<script>
+$(function(){
+    $(document).on('click', function(e){
+        if(!window._abq) return;
+        
+        var target = $(e.target);
+
+        while(target.length > 0 && target.get(0) != document){
+            var abevent = target.attr('abevent') || target.attr('uxevent');
+
+            if(abevent){
+                if(abevent.indexOf('/') == 0){
+                    if(abevent) _abq.push(['_track'].concat(abevent.substr(1).split('/')));
+                }else{
+                    if(abevent) _abq.push(['_track'].concat(abevent.split('/')));
+                }
+            }
+
+            target = target.parent();
+        }
+    });
+});
+
+
+/**
+ * 日志打点(针对曝光)
+ *
+ * @param pl 标识
+ * @param ds 打点内容
+ */
+function uxl_exposure_track(pl, ds) {
+    if(!_abq) _abq = [];
+    var _params = {"pl" : pl, "ds" : ds};
+    _abq.push(['_eventReq', _params]);
+}
+/*
+ * 点击埋点的方法如果不存在，则添加
+ */
+if(typeof uxl_track != 'function') {
+    // ab统计
+    function uxl_track(event) {
+        if(!_abq) _abq = [];
+        event = event || '';
+        _abq.push(['_track'].concat(event.split('/')));
+    }
+}
+
+</script>
+
+<!-- oneapm test -->
+<!--<script type='text/javascript'>window.BWEUM||(BWEUM={});BWEUM.info = {"stand":true,"agentType":"browser","agent":"bi-collector.oneapm.com/static/js/bw-send-411.4.5.js","beaconUrl":"bi-collector.oneapm.com/beacon","licenseKey":"van2I~JfvFV3FvIZ","applicationID":2276203};</script>
+<script type="text/javascript" src="https://bi-collector.oneapm.com/static/js/bw-loader-411.4.5.js"></script>-->
+<script type="text/javascript">
+    /*(function(){
+        function getCookie(c_name){ if (document.cookie.length <= 0) return ""; var c_start = document.cookie.indexOf(c_name + "="); if (c_start <= -1) return ""; c_start = c_start + c_name.length + 1; var c_end = document.cookie.indexOf(";", c_start); if (c_end == -1) c_end = document.cookie.length; return unescape(document.cookie.substring(c_start, c_end)); };
+        if(getCookie('event-visualizer') === 'open' && window._ApmXMLHttpRequest)window.XMLHttpRequest = window._ApmXMLHttpRequest;
+    })();*/
+
+	// baidu监测
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?ae57612a280420ca44598b857c8a9712";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();
+
+    // admaster监测 {* jira-5289 170425 暂时注释掉*}
+    var _smq = _smq || [];
+    _smq.push(['_setAccount', '14b535e', new Date()]);
+    _smq.push(['_setDomainName', 'xin.com']);
+    _smq.push(['pageview']);
+    /*(function () {
+        var sm = document.createElement('script');
+        sm.type = 'text/javascript';
+        sm.async = true;
+        sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(sm, s);
+    })();
+    */
+    $(document).ready(function(){
+        if (typeof(TOP_INFO) != 'undefined' && TOP_INFO.location.cityid=='201') {
+            $('.a_sellpage').attr('uxevent', 'w_top/c2bsell');
+        } else {
+            $('.a_sellpage').attr('uxevent', 'w_top/sellcar');
+        }
+        $('.a_buypage').attr({ 'uxevent':'w_top/buycar' });
+
+        $('.a_question').attr({ 'onclick':"uxl_track('w_top/question')"});
+        $('.a_service').attr({ 'onclick':"uxl_track('w_top/service')"});
+
+        $("#xin_top_userinfo").on("click","#regA",function(){
+            uxl_track('w_top/regist');
+        });
+
+        $("#xin_top_userinfo").on("click","#loginA",function(){
+            uxl_track('w_top/login');
+        });
+
+        $('#php_half_city_link').attr({ 'uxevent':'w_top/halfprice' });
+        $('#php_half_city_link').attr({ 'uxevent':'w_top/halfprice' });
+        
+        /*$('.list-con .con').on('click', 'a', function(){
+            if ($(this).attr('href') && $(this).attr('data-position')) {
+                uxl_track('w_' + (""=='halfprice' ? 'halfprice_carlist' : 'carlist') + '/rank/' + ($('.page-current').text() ? $('.page-current').text() : 'Unknown') + '-' + $(this).attr('data-position') + '/carid/' + $(this).attr('data-carid'));
+            }
+        });*/
+
+    });
+    // ab统计
+    function uxl_track(event) {
+        var ux_event = (event != 'undefined') ? $.trim(event) : '';
+        if (ux_event.length > 0) {
+            if(_abq) _abq.push(['_track'].concat(ux_event.split('/')));
+        }
+    }    
+</script>
+
+
+<!---end- 添加Google GA统计-->
+
+
+        <script> 
+            $(document).ready(function(){
+                var pagetag = "";
+                setHeaderType();
+                function setHeaderType(){
+                    $(".jp-"+pagetag).addClass("p-on");
+                }
+                // 标记页头选中状态
+                var hclass = '';
+                if(location.pathname.match(/^\/s(\/\S*)?$/)) {
+                    hclass = '.a_buypage';
+                } else if(location.pathname.match(/^\/sale\/c2b_car(\/\S*)?$/) || location.pathname.match(/^\/sale\/index(\/\S*)?$/) || location.pathname.match(/^\/c2b_car\/(.*?)$/)) {
+                    hclass = '.a_sellpage';
+                } else if(location.pathname.match(/^\/h(\/\S*)?$/)) {
+                     hclass = '#php_half_city_link';
+                } else if(location.pathname.match(/^\/(activity|article|qa)(\/\S*)?$/)) {
+                     hclass = '.a_question';
+                } else if(location.pathname.match(/^\/service(\/\S*)?$/)) {
+                     hclass = '.a_service';
+                } else if(location.pathname.match(/^\/app(\/\S*)?$/)) {
+                     hclass = '#id_dl_app';
+                }
+                if(hclass) {
+                    $(hclass).removeClass('active');
+                    $(hclass).addClass('active');
+                }
+            });
+        </script>
+        
+        
+    </body>
+</html>

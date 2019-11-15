@@ -1,0 +1,172 @@
+/*!newcar-www:widget/c2b_sale_new/c2b_car_message_new/banner/banner.css*/
+.MD-c2b_sale_new-c2b_car_message_new-banner-banner-wrap{height:100px;background-image:linear-gradient(to top,#fcfcfd,#fbfbfb)}
+.MD-c2b_sale_new-c2b_car_message_new-banner-banner{position:relative;width:1270px;height:100px;margin:0 auto;background-image:url(//s4.xinstatic.com/static/newcar-www/widget/c2b_sale_new/c2b_car_message_new/banner/imgs/banner_eac2d1a.png);background:-webkit-image-set(url(//s4.xinstatic.com/static/newcar-www/widget/c2b_sale_new/c2b_car_message_new/banner/imgs/banner_eac2d1a.png) 1x,url(//s5.xinstatic.com/static/newcar-www/widget/c2b_sale_new/c2b_car_message_new/banner/imgs/banner@2x_dce323b.png) 2x);background:image-set(url(//s4.xinstatic.com/static/newcar-www/widget/c2b_sale_new/c2b_car_message_new/banner/imgs/banner_eac2d1a.png) 1x,url(//s5.xinstatic.com/static/newcar-www/widget/c2b_sale_new/c2b_car_message_new/banner/imgs/banner@2x_dce323b.png) 2x);background-repeat:no-repeat;background-position:left center}
+.MD-c2b_sale_new-c2b_car_message_new-banner-strong-title{color:#585858;font-size:30px;line-height:100px;margin-left:150px;float:left}
+.MD-c2b_sale_new-c2b_car_message_new-banner-time{font-size:14px;color:#999;line-height:100px;padding:0 0 0 25px;float:left}
+.MD-c2b_sale_new-c2b_car_message_new-banner-banner-left{position:absolute;left:0}
+.MD-c2b_sale_new-c2b_car_message_new-banner-banner-right{position:absolute;right:0;height:100px;line-height:100px;padding-right:93px}
+.MD-c2b_sale_new-c2b_car_message_new-banner-text{font-size:14px;color:#999}
+.MD-c2b_sale_new-c2b_car_message_new-banner-text.MD-c2b_sale_new-c2b_car_message_new-banner-active{color:#f85d00}
+.MD-c2b_sale_new-c2b_car_message_new-banner-img-sty{vertical-align:-3px;margin:0 20px}
+.MD-c2b_sale_new-c2b_car_message_new-banner-strong{color:#F85D00;font-style:normal}
+/*!newcar-www:widget/c2b_sale_new/title/title.css*/
+.MD-c2b_sale_new-title-title{width:56px;font-size:14px;color:#333;line-height:50px;float:left}
+.MD-c2b_sale_new-title-in-box{width:110px;height:48px;border:solid 1px #e5e5e5;margin-left:72px;position:relative;padding:0 20px;cursor:pointer;display:block}
+.MD-c2b_sale_new-title-in-box::after{content:"";position:absolute;background:url(imgs/salecar-arrow.png) no-repeat;height:10px;width:10px;right:15px;top:50%;margin-top:-5px}
+.MD-c2b_sale_new-title-in-txt{color:#333;font-size:14px;display:block;width:100%;outline:0;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;line-height:48px}
+/*!newcar-www:widget/c2b_sale_new/city_choose/city_choose.css*/
+input::-webkit-input-placeholder{color:#ccc}
+input::-moz-placeholder{color:#ccc}
+input:-moz-placeholder{color:#ccc}
+input:-ms-input-placeholder{color:#ccc}
+input::-webkit-contacts-auto-fill-button{visibility:hidden;display:none!important;pointer-events:none;position:absolute;right:0}
+.MD-c2b_sale_new-city_choose-fill-content{width:480px;margin:0 auto;padding-bottom:70px;position:relative}
+.MD-c2b_sale_new-city_choose-fill-title{line-height:20px;font-size:14px;color:#999;text-align:center;padding:32px 0;font-weight:400;width:480px;margin:0 auto}
+.clearfix:after{content:"";height:0;line-height:0;display:block;visibility:hidden;clear:both}
+.clearfix{zoom:1}
+.MD-c2b_sale_new-city_choose-row{height:50px;margin-bottom:15px;position:relative;width:100%;overflow:hidden}
+.MD-c2b_sale_new-city_choose-row.MD-c2b_sale_new-city_choose-change-wid{width:224px}
+.MD-c2b_sale_new-city_choose-row.MD-c2b_sale_new-city_choose-fl{float:left}
+.MD-c2b_sale_new-city_choose-row.MD-c2b_sale_new-city_choose-fr{float:right}
+.MD-c2b_sale_new-city_choose-in-box{height:48px;border:solid 1px #e5e5e5;margin-left:72px;position:relative;cursor:pointer;display:block;font-size:0}
+.MD-c2b_sale_new-city_choose-mile{overflow:visible}
+.MD-c2b_sale_new-city_choose-btn-box{position:relative;padding:15px 0 100px 72px}
+.MD-c2b_sale_new-city_choose-error-tip{font-size:12px;color:#f85d00;position:absolute;left:72px;top:-15px;line-height:30px;padding-left:10px;display:none}
+.MD-c2b_sale_new-city_choose-submit-btn{width:300px;height:50px;border-radius:3px;background:#e1e1e1;font-size:18px;color:#acacac;text-align:center;line-height:50px;display:block;cursor:pointer}
+.MD-c2b_sale_new-city_choose-submit-btn.MD-c2b_sale_new-city_choose-active{background:#f85d00;color:#fff;box-shadow:0 2px 6px 0 rgba(248,93,0,.15);-webkit-box-shadow:0 2px 6px 0 rgba(248,93,0,.15)}
+.totast{background:rgba(0,0,0,.6);font-size:14px;height:40px;line-height:40px;position:absolute;left:200px;top:219px;width:110px;text-align:center;display:none;color:#fff;border-radius:2px;-webkit-border-radius:2px;background:#000\0}
+.totast-tip{position:absolute;left:50%;top:50%;background:rgba(0,0,0,.6);font-size:14px;padding:10px;line-height:20px;margin-top:-20px;text-align:center;color:#fff;border-radius:2px;-webkit-border-radius:2px;transform:translate3d-(50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);-moz-transform:translate3d(-50%,-50%,0);-webkit-transform:translate3d(-50%,-50%,0);-o-transform:translate3d(-50%,-50%,0)}
+.MD-c2b_sale_new-city_choose-city-choose-grow{overflow:hidden}
+.MD-c2b_sale_new-city_choose-city-input{float:left;font-size:14px;color:#333;width:87px;height:48px;line-height:48px;text-align:left;border:1px solid #e5e5e5;margin-left:10px;padding:0 20px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;cursor:pointer;position:relative}
+.MD-c2b_sale_new-city_choose-city-input:first-child{margin-left:16px}
+.MD-c2b_sale_new-city_choose-city-input::after{content:"";position:absolute;background:url(//s5.xinstatic.com/static/newcar-www/widget/c2b_sale_new/content/imgs/salecar-arrow_5bab7e9.png) no-repeat;height:10px;width:10px;right:15px;top:50%;margin-top:-5px}
+.MD-c2b_sale_new-city_choose-gary{color:#ccc}
+.MD-c2b_sale_new-city_choose-city-choose-pop{border:2px solid #E5E5E5;padding:30px;background:#fff;position:absolute;left:0;top:0}
+.MD-c2b_sale_new-city_choose-city-choose-list-ul{border:1px solid #E5E5E5;height:420px;width:147px;float:left;overflow-y:scroll}
+.MD-c2b_sale_new-city_choose-city-choose-list-li a{display:block;height:34px;line-height:34px;font-size:14px;color:#999;padding:0 20px;cursor:pointer;position:relative;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.MD-c2b_sale_new-city_choose-city-choose-list-li:hover{background:#eaeaea}
+.MD-c2b_sale_new-city_choose-active a{background:#FFF7F2;color:#F85D00}
+/*!newcar-www:widget/c2b_sale_new/content/content.css*/
+.MD-c2b_sale_new-content-title{width:56px;font-size:14px;color:#333;line-height:50px;float:left}
+.MD-c2b_sale_new-content-in-txt{color:#333;font-size:14px;display:block;padding:0 20px;outline:0;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;line-height:48px;position:relative;height:48px}
+.MD-c2b_sale_new-content-fc-gray{color:#ccc}
+.MD-c2b_sale_new-content-in-txt::after{content:"";position:absolute;background:url(//s5.xinstatic.com/static/newcar-www/widget/c2b_sale_new/content/imgs/salecar-arrow_5bab7e9.png) no-repeat;height:10px;width:10px;right:15px;top:50%;margin-top:-5px}
+.MD-c2b_sale_new-content-change-wid{width:35px;display:inline-block}
+/*!newcar-www:widget/c2b_sale_new/mile/mile.css*/
+.MD-c2b_sale_new-mile-in-mile{color:#333;font-size:14px;border:0;display:block;padding:0 20px;outline:0;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;height:48px}
+.MD-c2b_sale_new-mile-unit-txt{font-size:14px;color:#333;position:absolute;line-height:50px;top:0;right:20px}
+.MD-c2b_sale_new-mile-max-mile-tip{position:absolute;background:#666;left:6px;top:-34px;height:30px;line-height:30px;padding:0 10px;font-size:12px;color:#fff}
+.MD-c2b_sale_new-mile-mile-tip-arrow{width:0;height:10px;border:10px solid;border-color:#666 transparent transparent;position:absolute;left:0;bottom:-30px}
+input[type=text]::-ms-clear{display:none}
+/*!newcar-www:widget/c2b_sale_new/car_condition/car_condition.css*/
+.MD-c2b_sale_new-car_condition-car-label{float:left;width:86%}
+.MD-c2b_sale_new-car_condition-icon{display:inline-block;padding:10px 0;width:127px;font-size:14px;color:#585858;text-align:center;border-radius:23px;-webkit-border-radius:23px;background:#f8f8f8;margin-left:10px;margin-bottom:12px;cursor:pointer}
+.MD-c2b_sale_new-car_condition-active{color:#FF4800;background:rgba(255,72,0,.1)}
+/*!newcar-www:widget/c2b_sale_new/letter_notification/letter_notification.css*/
+.MD-c2b_sale_new-letter_notification-wrap-letter{display:block;font-size:14px;color:#ccc;padding-left:72px;margin-top:40px}
+.MD-c2b_sale_new-letter_notification-lit-pic{display:inline-block;width:14px;height:14px;background:url(//s4.xinstatic.com/static/newcar-www/widget/c2b_sale_new/letter_notification/img/pic1_977a4d4.png) no-repeat;margin-right:11px;vertical-align:-2px;cursor:pointer}
+.MD-c2b_sale_new-letter_notification-active{background:url(//s4.xinstatic.com/static/newcar-www/widget/c2b_sale_new/letter_notification/img/pic2_f4d5873.png) no-repeat;cursor:pointer}
+.MD-c2b_sale_new-letter_notification-notification{display:inline-block;color:#4A90E2}
+.MD-c2b_sale_new-letter_notification-content{width:600px;height:410px;background:#fff;z-index:102;padding:50px 40px}
+.MD-c2b_sale_new-letter_notification-close{position:absolute;right:20px;top:20px;width:15px;height:15px;background:url(//s4.xinstatic.com/static/newcar-www/widget/c2b_sale_new/letter_notification/img/close_7091297.png) no-repeat;cursor:pointer}
+.MD-c2b_sale_new-letter_notification-title{display:block;font-size:20px;color:#1b1b1b;text-align:center;margin-bottom:30px}
+.MD-c2b_sale_new-letter_notification-text{display:block;font-size:14px;color:#333;line-height:38px;text-indent:28px}
+/*!newcar-www:widget/c2b_sale_new/next_btn/next_btn.css*/
+.MD-c2b_sale_new-next_btn-btn-box{position:relative;padding:15px 0 100px 72px}
+.MD-c2b_sale_new-next_btn-error-tip{font-size:12px;color:#f85d00;position:absolute;left:72px;top:-15px;line-height:30px;padding-left:10px;display:none}
+.MD-c2b_sale_new-next_btn-submit-btn{width:300px;height:50px;border-radius:3px;background:linear-gradient(90deg,rgba(252,150,0,1),rgba(248,93,0,1));background:#F85D00\0;font-size:18px;color:#fff;text-align:center;line-height:50px;display:block;cursor:pointer;opacity:.3;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+.MD-c2b_sale_new-next_btn-submit-btn.MD-c2b_sale_new-next_btn-active{color:#fff;box-shadow:0 2px 6px 0 rgba(248,93,0,.15);-webkit-box-shadow:0 2px 6px 0 rgba(248,93,0,.15);opacity:1}
+.MD-c2b_sale_new-next_btn-text{color:#fff;display:block;width:100%;height:100%}
+/*!newcar-www:widget/c2b_sale_new/down_popup/down_popup.css*/
+.downwrap{position:absolute;left:72px;z-index:1;display:none;background:#fff;padding:0 30px;border:2px solid #E5E5E5;overflow:hidden}
+/*!newcar-www:widget/c2b_sale_new/car_plate/car_plate.css*/
+.MD-c2b_sale_new-car_plate-title{height:36px;line-height:36px;color:#999;font-size:14px}
+.MD-c2b_sale_new-car_plate-plist{overflow:hidden;width:380px;height:170px;padding:30px 0}
+.MD-c2b_sale_new-car_plate-item{width:30px;height:30px;border-radius:2px;-webkit-border-radius:2px;border:1px solid rgba(204,204,204,1);margin:0 12px 12px 0;float:left;font-size:14px;color:#585858;text-align:center;line-height:30px;cursor:pointer;padding:0}
+.MD-c2b_sale_new-car_plate-item.MD-c2b_sale_new-car_plate-active{border:1px solid rgba(248,93,0,1);background:rgba(255,247,242,1);color:#F85D00}
+.MD-c2b_sale_new-car_plate-carplate{width:340px;height:164px;padding:30px 0;overflow:hidden}
+/*!newcar-www:widget/c2b_sale_new/car_letter/car_letter.css*/
+.MD-c2b_sale_new-car_letter-title{height:36px;line-height:36px;color:#999;font-size:14px}
+.MD-c2b_sale_new-car_letter-plist{overflow:hidden;width:380px;height:170px;padding:30px 0}
+.MD-c2b_sale_new-car_letter-item{width:30px;height:30px;border-radius:2px;-webkit-border-radius:2px;border:1px solid rgba(204,204,204,1);margin:0 12px 12px 0;float:left;font-size:14px;color:#585858;text-align:center;line-height:30px;cursor:pointer;padding:0}
+.MD-c2b_sale_new-car_letter-item.MD-c2b_sale_new-car_letter-active{border:1px solid rgba(248,93,0,1);background:rgba(255,247,242,1);color:#F85D00}
+.MD-c2b_sale_new-car_letter-carplate{width:340px;height:164px;padding:30px 0;overflow:hidden}
+/*!newcar-www:widget/c2b_sale_new/brand_audi_model/brand_audi_model.css*/
+.MD-c2b_sale_new-brand_audi_model-drop-content{border:1px solid #E5E5E5;margin-bottom:30px;overflow:hidden}
+.MD-c2b_sale_new-brand_audi_model-title{height:36px;line-height:36px;color:#999;font-size:14px}
+.MD-c2b_sale_new-brand_audi_model-item{height:34px;line-height:34px;color:#999;font-size:14px;padding:0 20px;cursor:pointer;display:block;position:relative;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.MD-c2b_sale_new-brand_audi_model-item.MD-c2b_sale_new-brand_audi_model-active{background:#FFF7F2;color:#F85D00}
+.js-brand-audi-model{height:480px;width:820px}
+.MD-c2b_sale_new-brand_audi_model-brand-wrap{width:180px;margin-right:30px;float:left}
+.MD-c2b_sale_new-brand_audi_model-letter-box{float:left;width:30px;background:#fafafa;border-right:1px solid #e5e5e5;height:420px}
+.MD-c2b_sale_new-brand_audi_model-letter{font-size:12px;color:#999;text-align:center;display:block;line-height:17px;cursor:pointer}
+.MD-c2b_sale_new-brand_audi_model-brand-list{height:420px;width:147px;float:left;overflow-y:scroll}
+.MD-c2b_sale_new-brand_audi_model-title-letter{display:block;height:30px;line-height:30px;font-size:14px;color:#585858;padding-left:15px;background:#f9f9f9}
+.MD-c2b_sale_new-brand_audi_model-item:after{content:"";position:absolute;width:4px;height:4px;border-top:1px solid #999;border-right:1px solid #999;transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);top:50%;margin-top:-2px;right:20px}
+.MD-c2b_sale_new-brand_audi_model-item.MD-c2b_sale_new-brand_audi_model-active:after{border-top:1px solid #F85D00;border-right:1px solid #F85D00}
+.MD-c2b_sale_new-brand_audi_model-audi-wrap{width:180px;float:left;margin-right:30px}
+.MD-c2b_sale_new-brand_audi_model-audi-list{height:420px;width:180px;overflow-y:scroll}
+.MD-c2b_sale_new-brand_audi_model-model-wrap{width:396px;float:left}
+.MD-c2b_sale_new-brand_audi_model-model-list{height:420px;overflow-y:scroll;display:none}
+.MD-c2b_sale_new-brand_audi_model-model-list .MD-c2b_sale_new-brand_audi_model-item:after,.MD-c2b_sale_new-brand_audi_model-model-list .MD-c2b_sale_new-brand_audi_model-item.MD-c2b_sale_new-brand_audi_model-active:after{border:0}
+/*!newcar-www:widget/c2b_sale_new/card_time/card_time.css*/
+.MD-c2b_sale_new-card_time-dtitle{height:36px;line-height:36px;font-size:14px;color:#999}
+.MD-c2b_sale_new-card_time-drop-content{border:1px solid #e5e5e5;overflow:hidden}
+.MD-c2b_sale_new-card_time-item{display:block;font-size:14px;color:#7a7a7a;font-weight:300;height:30px;line-height:30px;padding-left:15px;position:relative;cursor:pointer}
+.MD-c2b_sale_new-card_time-item.MD-c2b_sale_new-card_time-active{color:#F85D00;background:#FFF7F2}
+.MD-c2b_sale_new-card_time-year-wrap{width:157px;float:left;margin-right:30px}
+.MD-c2b_sale_new-card_time-year-list{overflow-y:scroll;height:190px;width:100%}
+.MD-c2b_sale_new-card_time-month-wrap{float:left;width:157px}
+.MD-c2b_sale_new-card_time-month-list{height:190px;overflow-y:scroll;width:100%}
+.MD-c2b_sale_new-card_time-disable{color:#eaeaea;cursor:not-allowed}
+/*!newcar-www:widget/c2b_sale_new/login_popup/login_popup.css*/
+.MD-c2b_sale_new-login_popup-inf-popup{width:320px;height:290px;border-radius:3px;background-color:#fff;position:absolute;padding:40px;z-index:999;display:none}
+.MD-c2b_sale_new-login_popup-tip-popup{height:170px}
+.MD-c2b_sale_new-login_popup-close{background:url(//s4.xinstatic.com/static/newcar-www/widget/c2b_sale_new/login_popup/imgs/pop-close_8680677.png) no-repeat;position:absolute;right:-40px;top:2px;height:20px;width:20px;cursor:pointer}
+.MD-c2b_sale_new-login_popup-titile{font-size:26px;color:#1b1b1b;padding-bottom:5px}
+.MD-c2b_sale_new-login_popup-small-title{font-size:16px;color:#999;line-height:28px}
+.MD-c2b_sale_new-login_popup-row{width:100%;height:50px;border-radius:3px;background-color:#fff;border:solid 1px #e5e5e5;margin-top:20px}
+.MD-c2b_sale_new-login_popup-l-inp{border:0;outline:0;height:16px;display:block;padding:17px 10px;font-size:16px}
+.MD-c2b_sale_new-login_popup-btn-box{padding-top:40px;position:relative}
+.MD-c2b_sale_new-login_popup-btn{width:100%;height:46px;border-radius:3px;line-height:46px;text-align:center;font-size:18px;color:#fff;display:block;cursor:pointer;background:linear-gradient(90deg,rgba(252,150,0,1),rgba(248,93,0,1));background:#F85D00\0;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+.MD-c2b_sale_new-login_popup-disabled{background:#e1e1e1}
+.MD-c2b_sale_new-login_popup-error{display:none;position:absolute;left:0;top:8px;color:#f85d00;font-size:14px;padding-left:5px}
+.MD-c2b_sale_new-login_popup-phone{}
+.MD-c2b_sale_new-login_popup-inp-yxm{width:150px;float:left}
+.MD-c2b_sale_new-login_popup-yzm-box{float:right;height:50px;color:#e5e5e5}
+.MD-c2b_sale_new-login_popup-yzm,.MD-c2b_sale_new-login_popup-active{width:116px;padding:17px 10px;text-align:center;font-size:16px;color:#585858;display:inline-block;height:16px;vertical-align:middle;cursor:pointer;list-style-type:none;background:0 0;outline:0;border:0;vertical-align:middle}
+.MD-c2b_sale_new-login_popup-active{color:#999}
+/*!newcar-www:widget/c2b_sale_new/other_popup/other_popup.css*/
+.MD-c2b_sale_new-other_popup-inf-popup{width:320px;height:290px;border-radius:3px;background-color:#fff;position:absolute;padding:40px;z-index:999}
+.MD-c2b_sale_new-other_popup-tip-popup{height:170px}
+.MD-c2b_sale_new-other_popup-close{background:url(//s6.xinstatic.com/static/newcar-www/widget/c2b_sale_new/other_popup/imgs/pop-close_8680677.png) no-repeat;position:absolute;right:-40px;top:2px;height:20px;width:20px;cursor:pointer}
+.MD-c2b_sale_new-other_popup-titile{font-size:26px;color:#1b1b1b;padding-bottom:5px}
+.MD-c2b_sale_new-other_popup-small-title{font-size:16px;color:#999;line-height:28px}
+.MD-c2b_sale_new-other_popup-btn-box{padding-top:40px;position:relative}
+.MD-c2b_sale_new-other_popup-btn{width:100%;height:46px;border-radius:3px;line-height:46px;text-align:center;font-size:18px;color:#fff;display:block;cursor:pointer;background:linear-gradient(90deg,rgba(252,150,0,1),rgba(248,93,0,1));background:#F85D00\0;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+/*!newcar-www:widget/c2b_sale_new/c2b_car_message_new/fill_information/fill_information.css*/
+input::-webkit-input-placeholder{color:#ccc}
+input::-moz-placeholder{color:#ccc}
+input:-moz-placeholder{color:#ccc}
+input:-ms-input-placeholder{color:#ccc}
+input::-webkit-contacts-auto-fill-button{visibility:hidden;display:none!important;pointer-events:none;position:absolute;right:0}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-fill-content{width:480px;margin:0 auto;padding-top:40px;position:relative}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-fill-title{line-height:20px;font-size:14px;color:#999;text-align:center;padding:32px 0;font-weight:400;width:480px;margin:0 auto}
+.clearfix:after{content:"";height:0;line-height:0;display:block;visibility:hidden;clear:both}
+.clearfix{zoom:1}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-row{height:50px;margin-bottom:15px;position:relative;width:100%;overflow:hidden}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-row.MD-c2b_sale_new-c2b_car_message_new-fill_information-change-wid{width:224px}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-row.MD-c2b_sale_new-c2b_car_message_new-fill_information-fl{float:left}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-row.MD-c2b_sale_new-c2b_car_message_new-fill_information-fr{float:right}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-in-box{height:48px;border:solid 1px #e5e5e5;margin-left:72px;position:relative;cursor:pointer;display:block;font-size:0}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-mile{overflow:visible}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-condition{height:auto;font-size:0;margin-top:25px}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-condition-fr{float:left;margin-top:10px}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-car-condition-title{font-size:14px;color:#333;display:block}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-check{font-size:12px;color:#ccc;display:block;margin-top:6px}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-btn-box{position:relative;padding:15px 0 100px 72px}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-error-tip{font-size:12px;color:#f85d00;position:absolute;left:72px;top:-15px;line-height:30px;padding-left:10px;display:none}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-submit-btn{width:300px;height:50px;border-radius:3px;background:#e1e1e1;font-size:18px;color:#acacac;text-align:center;line-height:50px;display:block;cursor:pointer}
+.MD-c2b_sale_new-c2b_car_message_new-fill_information-submit-btn.MD-c2b_sale_new-c2b_car_message_new-fill_information-active{background:#f85d00;color:#fff;box-shadow:0 2px 6px 0 rgba(248,93,0,.15);-webkit-box-shadow:0 2px 6px 0 rgba(248,93,0,.15)}
+.totast{background:rgba(0,0,0,.6);font-size:14px;height:40px;line-height:40px;position:absolute;left:200px;top:175px;width:110px;text-align:center;display:none;color:#fff;border-radius:2px;-webkit-border-radius:2px;background:#000\0}
+.totast-tip{position:absolute;left:50%;top:50%;background:rgba(0,0,0,.6);font-size:14px;padding:10px;line-height:20px;margin-top:-20px;text-align:center;color:#fff;border-radius:2px;-webkit-border-radius:2px;transform:translate3d-(50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);-moz-transform:translate3d(-50%,-50%,0);-webkit-transform:translate3d(-50%,-50%,0);-o-transform:translate3d(-50%,-50%,0)}

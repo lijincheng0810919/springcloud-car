@@ -1,0 +1,48 @@
+.main{width:1180px;margin:0 auto;overflow:hidden;position:relative}
+.p-margin-btm{margin-bottom:40px}
+
+.MD-join_us-social_home_list-p-new-job{margin:40px 0;border:1px solid #f3f3f4;overflow:hidden}
+.MD-join_us-social_home_list-p-new-job-left{width:900px;float:left;border-right:1px solid #f3f3f4}
+.MD-join_us-social_home_list-p-new-job-left dt{font-size:18px;color:#6e6f75;height:60px;line-height:60px;padding:0 30px;border-bottom:1px solid #f3f3f4;position:relative}
+.MD-join_us-social_home_list-p-more{position:absolute;top:0;right:30px;font-size:14px;color:#787B84}
+.MD-join_us-social_home_list-p-new-job-left dd{padding-left:30px;height:46px;line-height:46px;font-size:14px;position:relative}
+.MD-join_us-social_home_list-p-new-job-left dd a{color:#4163DA}
+.MD-join_us-social_home_list-p-name{width:60%;display:inline-block}
+.MD-join_us-social_home_list-p-city{color:#787B84}
+.MD-join_us-social_home_list-p-time{position:absolute;top:0;right:40px;color:#787B84}
+.MD-join_us-social_home_list-p-code{text-align:center;color:#787B84;font-size:16px;line-height:24px;overflow:hidden}
+.MD-join_us-social_home_list-p-code .MD-join_us-social_home_list-p-title{display:block;color:#4c4d54;font-size:18px;margin-top:28px;font-weight:700}
+.MD-join_us-social_home_list-p-code img{display:block;margin:28px auto}
+
+.MD-join_us-social_home_banner-p-banner{width:100%;height:440px;background:url(../image/banner_1c2ae47.png) 50%}
+.MD-join_us-social_home_banner-p-search{padding-top:306px;text-align:center}
+.MD-join_us-social_home_banner-p-search-input{overflow:hidden;display:inline-block}
+.MD-join_us-social_home_banner-p-keyword-text{width:390px;height:44px;line-height:44px;background:#fff;font-size:18px;border:0;float:left;border-top-left-radius:4px;border-bottom-left-radius:4px;text-indent:18px}
+.MD-join_us-social_home_banner-p-keyword-btn{width:90px;height:44px;line-height:44px;font-size:18px;border:0;color:#fff;float:left;background:#ff7b2c;border-top-right-radius:4px;border-bottom-right-radius:4px;cursor:pointer}
+.MD-join_us-social_home_banner-p-keyword-btn:hover{background:#F85D00}
+.MD-join_us-social_home_banner-p-btn-ico{width:20px;height:17px;display:inline-block;background:url(../image/btn-ico_20fb96c.png) 50%;position:relative;top:2px;margin-right:6px}
+input::-webkit-input-placeholder{color:#CBCCD2}
+put:-moz-placeholder{color:#CBCCD2}
+input::-moz-placeholder{color:#CBCCD2}
+input:-ms-input-placeholder{color:#CBCCD2}
+.MD-join_us-social_home_banner-p-line{display:block}
+.MD-join_us-social_home_banner-p-hot-search{width:480px;display:block;margin:26px auto}
+.MD-join_us-social_home_banner-p-hot-search dt,.MD-join_us-social_home_banner-p-hot-search dd{font-size:14px;float:left;color:#fff}
+.MD-join_us-social_home_banner-p-hot-search dd{margin-left:20px}
+.MD-join_us-social_home_banner-p-hot-search a{color:#fff}
+.MD-join_us-social_home_banner-p-hot-search a:hover{color:#F85D00}
+
+.MD-join_us-social_home_header-p-social-home-header{height:60px;line-height:60px;background:#292E46;line-height:60px}
+.MD-join_us-social_home_header-p-header-ct{width:1180px;height:60px;margin:0 auto;position:relative}
+.MD-join_us-social_home_header-p-logo-link{position:absolute;width:130px;height:60px;text-align:center}
+.MD-join_us-social_home_header-p-logo-link img{margin-top:14px}
+.MD-join_us-social_home_header-p-header-tab-link{position:absolute;right:0;top:0;overflow:hidden}
+.MD-join_us-social_home_header-p-header-tab-link li{float:left;margin-left:50px;position:relative}
+.MD-join_us-social_home_header-p-header-tab-link li a{color:#fff;display:block}
+.MD-join_us-social_home_header-p-header-tab-link li:hover a{color:#F85D00}
+.MD-join_us-social_home_header-p-hover-ico{display:none;width:100%;height:4px;background:#F85D00;position:absolute;left:0;bottom:9px}
+.MD-join_us-social_home_header-p-header-tab-link li:hover .MD-join_us-social_home_header-p-hover-ico{display:inline-block}
+.MD-join_us-social_home_header-p-header-tab-link .MD-join_us-social_home_header-p-on a{color:#F85D00}
+.MD-join_us-social_home_header-p-header-tab-link .MD-join_us-social_home_header-p-on .MD-join_us-social_home_header-p-hover-ico{display:inline-block}
+
+.MD-join_us-social_home_footer-p-social-home-footer{height:40px;line-height:40px;background:#fafafa;color:#787B84;font-size:12px;text-align:center;position:fixed;left:0;bottom:0;width:100%}

@@ -8,6 +8,16 @@ public class BrandBean {
 
     private String img;
 
+    private String brandCode;
+
+    public String getBrandCode() {
+        return brandCode;
+    }
+
+    public void setBrandCode(String brandCode) {
+        this.brandCode = brandCode;
+    }
+
     public Integer getId() {
         return id;
     }

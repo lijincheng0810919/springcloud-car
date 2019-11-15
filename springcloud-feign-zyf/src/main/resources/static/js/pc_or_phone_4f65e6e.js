@@ -1,0 +1,2 @@
+;/*!newcar-www:static/js/longtail/pc_or_phone.js*/
+$(function(){function i(){var i=navigator.userAgent.toLowerCase(),o="ipad"==i.match(/ipad/i),n="iphone os"==i.match(/iphone os/i),w="midp"==i.match(/midp/i),a="rv:1.2.3.4"==i.match(/rv:1.2.3.4/i),c="ucweb"==i.match(/ucweb/i),e="android"==i.match(/android/i),t="windows ce"==i.match(/windows ce/i),h="windows mobile"==i.match(/windows mobile/i);return o||n||w||a||c||e||t||h?"phone":"pc"}"phone"==i()&&window.location.href.match(/^\S*(www\.)/g)&&(window.location.href=window.location.href.replace(/www\./,"m."))});
